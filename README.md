@@ -1,4 +1,4 @@
-# Canadian governments' open source code
+# Auditing tools for Canadian governments' open source code
 
 This project audits the source code repositories published by Canadian governments.
 
