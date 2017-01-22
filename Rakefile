@@ -52,7 +52,7 @@ namespace :licenses do
                 if matched_file.license
                   licenses[repo.full_name] = {
                     'id' => matched_file.license.meta['spdx-id'],
-                    'url' => "https://github.com/#{repo.full_name}/blob/master/#{matched_file.filename}",
+                    'url' => "https://github.com/#{repo.full_name}/blob/#{repo.default_branch}/#{matched_file.filename}",
                     'confidence' => matched_file.confidence,
                   }
                 elsif matched_file.is_a?(Licensee::Project::LicenseFile)
@@ -62,7 +62,7 @@ namespace :licenses do
                   unless matches.empty?
                     licenses[repo.full_name] = {
                       'id' => matches[0][0].meta['spdx-id'],
-                      'url' => "https://github.com/#{repo.full_name}/blob/master/#{matched_file.filename}",
+                      'url' => "https://github.com/#{repo.full_name}/blob/#{repo.default_branch}/#{matched_file.filename}",
                       'confidence' => matches[0][1],
                     }
                   end
@@ -221,7 +221,6 @@ namespace :repos do
 
   desc 'Adds licenses to the repositories'
   task :license do
-    # TODO Make configurable.
     en_license = Faraday.get('https://raw.githubusercontent.com/wet-boew/wet-boew/master/License-en.txt').body
     fr_license = Faraday.get('https://raw.githubusercontent.com/wet-boew/wet-boew/master/Licence-fr.txt').body
 

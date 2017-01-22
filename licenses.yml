@@ -1,0 +1,366 @@
+---
+canada-ca/regs-consult-wet: 
+canada-ca/welcome: 
+CommunicationsSecurityEstablishment/spartacus:
+  id: GPL-2.0
+  url: https://github.com/CommunicationsSecurityEstablishment/spartacus/blob/master/LICENSE.md
+phac-nml/dynamic-tool-destination:
+  id: Apache-2.0
+  url: https://github.com/phac-nml/dynamic-tool-destination/blob/develop/LICENSE.txt
+phac-nml/ecoli_serotyping:
+  id: Apache-2.0
+  url: https://github.com/phac-nml/ecoli_serotyping/blob/master/LICENSE
+phac-nml/galaxy_tools:
+  id: GPL-2.0
+  url: https://github.com/phac-nml/galaxy_tools/blob/master/LICENSE
+phac-nml/irida:
+  id: Apache-2.0
+  url: https://github.com/phac-nml/irida/blob/development/LICENSE
+phac-nml/irida-galaxy-importer:
+  id: Apache-2.0
+  url: https://github.com/phac-nml/irida-galaxy-importer/blob/development/LICENSE
+phac-nml/irida-linker: 
+phac-nml/irida-miseq-uploader:
+  id: Apache-2.0
+  url: https://github.com/phac-nml/irida-miseq-uploader/blob/development/LICENSE
+phac-nml/neptune:
+  id: Apache-2.0
+  url: https://github.com/phac-nml/neptune/blob/release/1.2/LICENSE.txt
+phac-nml/PUBS2015: 
+phac-nml/snvphyl-galaxy:
+  id: Apache-2.0
+  url: https://github.com/phac-nml/snvphyl-galaxy/blob/master/LICENSE
+phac-nml/snvphyl-galaxy-cli:
+  id: Apache-2.0
+  url: https://github.com/phac-nml/snvphyl-galaxy-cli/blob/development/LICENSE
+phac-nml/snvphyl-tools:
+  id: Apache-2.0
+  url: https://github.com/phac-nml/snvphyl-tools/blob/master/LICENSE
+nrc-cnrc/AMBER: 
+nrc-cnrc/EGSnrc:
+  id: AGPL-3.0
+  url: https://github.com/nrc-cnrc/EGSnrc/blob/master/LICENCE
+nrc-cnrc/HTML5-whiteboard:
+  id: MIT
+  url: https://github.com/nrc-cnrc/HTML5-whiteboard/blob/master/LICENCE
+nrc-cnrc/InuktitutToolkit: 
+nrc-cnrc/Raith_GDSII:
+  id: MPL-2.0
+  url: https://github.com/nrc-cnrc/Raith_GDSII/blob/master/LICENSE
+NRCan/hello: 
+pspc-spac/pwgsc-drupal: 
+tbs-sct/GCcollab:
+  id: MPL-2.0
+  url: https://github.com/tbs-sct/GCcollab/blob/gccollab/LICENSE.txt
+  confidence: 46.437994722955146
+tbs-sct/gcconnex:
+  id: MPL-2.0
+  url: https://github.com/tbs-sct/gcconnex/blob/gcconnex/LICENSE.txt
+  confidence: 46.437994722955146
+tbs-sct/gcconnex-humhub: 
+tbs-sct/gcpedia:
+  id: GPL-2.0
+  url: https://github.com/tbs-sct/gcpedia/blob/gcpedia/COPYING
+tbs-sct/tbs-sct.github.io: 
+wet-boew/codefest: 
+wet-boew/codefest-transcripts: 
+wet-boew/GCWeb: 
+wet-boew/gcweb-experimental:
+  id: MIT
+  url: https://github.com/wet-boew/gcweb-experimental/blob/master/package.json
+  confidence: 90
+wet-boew/generator-wet-boew-theme: 
+wet-boew/grunt-cssmin-ie8-clean:
+  id: MIT
+  url: https://github.com/wet-boew/grunt-cssmin-ie8-clean/blob/master/LICENSE
+wet-boew/grunt-i18n-csv:
+  id: MIT
+  url: https://github.com/wet-boew/grunt-i18n-csv/blob/master/LICENSE
+wet-boew/grunt-usemin-assets:
+  id: MIT
+  url: https://github.com/wet-boew/grunt-usemin-assets/blob/master/LICENSE
+wet-boew/grunt-wet-boew-postbuild:
+  id: MIT
+  url: https://github.com/wet-boew/grunt-wet-boew-postbuild/blob/master/LICENSE
+wet-boew/node-git-simple:
+  id: MIT
+  url: https://github.com/wet-boew/node-git-simple/blob/master/LICENSE
+wet-boew/ol3:
+  id: BSD-2-Clause
+  url: https://github.com/wet-boew/ol3/blob/master/LICENSE.md
+wet-boew/openlayers:
+  id: BSD-2-Clause
+  url: https://github.com/wet-boew/openlayers/blob/master/license.txt
+wet-boew/openlayers-dist:
+  id: BSD-2-Clause
+  url: https://github.com/wet-boew/openlayers-dist/blob/master/license.txt
+wet-boew/spring-boot-thymeleaf:
+  id: MIT
+  url: https://github.com/wet-boew/spring-boot-thymeleaf/blob/master/LICENSE
+wet-boew/techspecs: 
+wet-boew/theme-base: 
+wet-boew/theme-gc-intranet: 
+wet-boew/theme-gcweb: 
+wet-boew/theme-gcwu-fegc: 
+wet-boew/theme-ogpl: 
+wet-boew/themes-cdn: 
+wet-boew/themes-dist: 
+wet-boew/web-reporting: 
+wet-boew/wet-boew: 
+wet-boew/wet-boew-aem: 
+wet-boew/wet-boew-api: 
+wet-boew/wet-boew-api-standards: 
+wet-boew/wet-boew-attachments: 
+wet-boew/wet-boew-cdn: 
+wet-boew/wet-boew-ckeditor: 
+wet-boew/wet-boew-codecharge: 
+wet-boew/wet-boew-dist:
+  id: Artistic-2.0
+  url: https://github.com/wet-boew/wet-boew-dist/blob/v4.0-dist/Licence-fr.html
+  confidence: 8.663366336633663
+wet-boew/wet-boew-dist-legacy: 
+wet-boew/wet-boew-docpad: 
+wet-boew/wet-boew-documentation: 
+wet-boew/wet-boew-dotnet: 
+wet-boew/wet-boew-dotnetnuke: 
+wet-boew/wet-boew-drupal: 
+wet-boew/wet-boew-drupal8: 
+wet-boew/wet-boew-elgg: 
+wet-boew/wet-boew-epub: 
+wet-boew/wet-boew-experimental: 
+wet-boew/wet-boew-hugo:
+  id: MIT
+  url: https://github.com/wet-boew/wet-boew-hugo/blob/master/LICENSE.md
+wet-boew/wet-boew-java-maven:
+  id: MIT
+  url: https://github.com/wet-boew/wet-boew-java-maven/blob/master/package.json
+  confidence: 90
+wet-boew/wet-boew-jekyll: 
+wet-boew/wet-boew-joomla: 
+wet-boew/wet-boew-legacy: 
+wet-boew/wet-boew-mobiledevicebasedapps: 
+wet-boew/wet-boew-moodle:
+  id: GPL-3.0
+  url: https://github.com/wet-boew/wet-boew-moodle/blob/master/license.txt
+wet-boew/wet-boew-multimedia-fallback: 
+wet-boew/wet-boew-php: 
+wet-boew/wet-boew-release:
+  id: MIT
+  url: https://github.com/wet-boew/wet-boew-release/blob/master/LICENSE
+wet-boew/wet-boew-sharepoint: 
+wet-boew/wet-boew-ssi: 
+wet-boew/wet-boew-student-project: 
+wet-boew/wet-boew-styleguide:
+  id: MIT
+  url: https://github.com/wet-boew/wet-boew-styleguide/blob/master/package.json
+  confidence: 90
+wet-boew/wet-boew-wordpress: 
+wet-boew/wet-boew-wpss: 
+wet-boew/wet-boew-xsl: 
+wet-boew/wet-boew.github.io: 
+wet-boew/wiwg_api_current-infrastructure: 
+wet-boew/wiwg_api_use-cases: 
+wet-boew/wiwg_html-data_core-types: 
+wet-boew/wiwg_html-data_use-cases: 
+open-data/ati-summaries: 
+open-data/ckan-datatools: 
+open-data/ckan-virtual-library-import: 
+open-data/ckanext-autodoc: 
+open-data/ckanext-canada: 
+open-data/ckanext-canada-ckan-1.8: 
+open-data/ckanext-cloudstorage: 
+open-data/ckanext-drupal: 
+open-data/ckanext-extendedactivity: 
+open-data/ckanext-fgp:
+  id: MIT
+  url: https://github.com/open-data/ckanext-fgp/blob/master/LICENSE
+open-data/ckanext-history: 
+open-data/ckanext-recombinant: 
+open-data/ckanext-repeating: 
+open-data/ckanext-stcndm: 
+open-data/ckanext-virtual-library:
+  id: MIT
+  url: https://github.com/open-data/ckanext-virtual-library/blob/master/LICENSE
+open-data/ckanext-wet-boew: 
+open-data/dataset-generator-sqlbased: 
+open-data/dataset-generator-webscraper: 
+open-data/docker-ndm:
+  id: MIT
+  url: https://github.com/open-data/docker-ndm/blob/master/LICENSE
+open-data/harvester-FGP: 
+open-data/hnap: 
+open-data/ndm-autocomplete:
+  id: MIT
+  url: https://github.com/open-data/ndm-autocomplete/blob/master/LICENSE
+open-data/od:
+  id: GPL-2.0
+  url: https://github.com/open-data/od/blob/8.x-2.x/LICENSE.txt
+open-data/open-data:
+  id: MIT
+  url: https://github.com/open-data/open-data/blob/master/LICENSE
+open-data/open-data.github.io: 
+open-data/opendata_package: 
+open-data/report-generator:
+  id: MIT
+  url: https://github.com/open-data/report-generator/blob/master/LICENSE
+open-data/report-PD-QA: 
+open-data/site-open-data: 
+open-data/tweakextras: 
+AAFC-MBB/acceptor:
+  id: MIT
+  url: https://github.com/AAFC-MBB/acceptor/blob/master/LICENSE
+AAFC-MBB/android-mock-ws: 
+AAFC-MBB/android-real-ws:
+  id: MIT
+  url: https://github.com/AAFC-MBB/android-real-ws/blob/master/LICENSE
+AAFC-MBB/annotation-scripts:
+  id: MIT
+  url: https://github.com/AAFC-MBB/annotation-scripts/blob/master/LICENSE
+AAFC-MBB/AODP_releases:
+  id: MIT
+  url: https://github.com/AAFC-MBB/AODP_releases/blob/master/LICENSE
+AAFC-MBB/biocluster-playbook:
+  id: MIT
+  url: https://github.com/AAFC-MBB/biocluster-playbook/blob/master/LICENSE
+AAFC-MBB/blackbox-pipeline:
+  id: MIT
+  url: https://github.com/AAFC-MBB/blackbox-pipeline/blob/dev/LICENSE
+AAFC-MBB/blastdb_dynamo:
+  id: MIT
+  url: https://github.com/AAFC-MBB/blastdb_dynamo/blob/master/LICENSE
+AAFC-MBB/blazegraph_extras: 
+AAFC-MBB/bold2blast:
+  id: LGPL-3.0
+  url: https://github.com/AAFC-MBB/bold2blast/blob/master/LICENSE
+AAFC-MBB/cookiemonster2:
+  id: MIT
+  url: https://github.com/AAFC-MBB/cookiemonster2/blob/master/LICENSE
+AAFC-MBB/crti-assembly-pipeline:
+  id: MIT
+  url: https://github.com/AAFC-MBB/crti-assembly-pipeline/blob/master/LICENSE
+AAFC-MBB/docker-assembly:
+  id: MIT
+  url: https://github.com/AAFC-MBB/docker-assembly/blob/master/LICENSE
+AAFC-MBB/dockerfiles:
+  id: MIT
+  url: https://github.com/AAFC-MBB/dockerfiles/blob/master/LICENSE
+AAFC-MBB/Galaxy: 
+AAFC-MBB/galaxy-PwParam:
+  id: MIT
+  url: https://github.com/AAFC-MBB/galaxy-PwParam/blob/master/LICENSE
+AAFC-MBB/gbif-ipt-vagrant:
+  id: MIT
+  url: https://github.com/AAFC-MBB/gbif-ipt-vagrant/blob/master/LICENSE
+AAFC-MBB/gflow:
+  id: MIT
+  url: https://github.com/AAFC-MBB/gflow/blob/master/LICENSE
+AAFC-MBB/HostPathogenLuceneIndexer:
+  id: MIT
+  url: https://github.com/AAFC-MBB/HostPathogenLuceneIndexer/blob/master/LICENSE
+AAFC-MBB/HostPathogenLuceneSearcher:
+  id: MIT
+  url: https://github.com/AAFC-MBB/HostPathogenLuceneSearcher/blob/master/LICENSE
+AAFC-MBB/hpdb:
+  id: MIT
+  url: https://github.com/AAFC-MBB/hpdb/blob/master/LICENSE
+AAFC-MBB/ITISProxy:
+  id: MIT
+  url: https://github.com/AAFC-MBB/ITISProxy/blob/master/LICENSE
+AAFC-MBB/ITISProxyLoader:
+  id: MIT
+  url: https://github.com/AAFC-MBB/ITISProxyLoader/blob/master/LICENSE
+AAFC-MBB/LicenseFixer:
+  id: MIT
+  url: https://github.com/AAFC-MBB/LicenseFixer/blob/master/LICENSE
+AAFC-MBB/matiri: 
+AAFC-MBB/MBB-Bio-Roll:
+  id: MIT
+  url: https://github.com/AAFC-MBB/MBB-Bio-Roll/blob/master/LICENSE
+AAFC-MBB/MBB-Bio-Roll-Docker:
+  id: MIT
+  url: https://github.com/AAFC-MBB/MBB-Bio-Roll-Docker/blob/master/LICENSE
+AAFC-MBB/NGSSampleManager:
+  id: MIT
+  url: https://github.com/AAFC-MBB/NGSSampleManager/blob/master/LICENSE
+AAFC-MBB/parallel_itsx:
+  id: MIT
+  url: https://github.com/AAFC-MBB/parallel_itsx/blob/master/LICENSE
+AAFC-MBB/puppet-manifests:
+  id: MIT
+  url: https://github.com/AAFC-MBB/puppet-manifests/blob/master/LICENSE
+AAFC-MBB/pybold:
+  id: LGPL-3.0
+  url: https://github.com/AAFC-MBB/pybold/blob/master/LICENSE
+AAFC-MBB/qsub-omics:
+  id: MIT
+  url: https://github.com/AAFC-MBB/qsub-omics/blob/master/LICENSE
+AAFC-MBB/RemoveSpecReplicate:
+  id: MIT
+  url: https://github.com/AAFC-MBB/RemoveSpecReplicate/blob/master/LICENSE
+AAFC-MBB/rpmout:
+  id: MIT
+  url: https://github.com/AAFC-MBB/rpmout/blob/master/LICENSE
+AAFC-MBB/rpmpaths:
+  id: MIT
+  url: https://github.com/AAFC-MBB/rpmpaths/blob/master/LICENSE
+AAFC-MBB/sge-puppet:
+  id: MIT
+  url: https://github.com/AAFC-MBB/sge-puppet/blob/master/LICENSE
+AAFC-MBB/snakemake-mothur:
+  id: MIT
+  url: https://github.com/AAFC-MBB/snakemake-mothur/blob/master/LICENSE
+AAFC-MBB/snakemake-trimmomatic:
+  id: MIT
+  url: https://github.com/AAFC-MBB/snakemake-trimmomatic/blob/master/LICENSE
+AAFC-MBB/snakemake-workflows:
+  id: MIT
+  url: https://github.com/AAFC-MBB/snakemake-workflows/blob/master/LICENSE
+AAFC-MBB/unitedb-py: 
+AAFC-MBB/vagrant-aws:
+  id: MIT
+  url: https://github.com/AAFC-MBB/vagrant-aws/blob/master/LICENSE
+AAFC-MBB/vagrant-galaxy-puppet:
+  id: MIT
+  url: https://github.com/AAFC-MBB/vagrant-galaxy-puppet/blob/master/LICENSE
+AAFC-MBB/vagrant-specify7:
+  id: MIT
+  url: https://github.com/AAFC-MBB/vagrant-specify7/blob/master/LICENSE
+AAFC-MBB/xlsx2redmine:
+  id: MIT
+  url: https://github.com/AAFC-MBB/xlsx2redmine/blob/master/LICENSE
+ECCC-MSC/MetOceanOWS:
+  id: GPL-3.0
+  url: https://github.com/ECCC-MSC/MetOceanOWS/blob/master/LICENSE
+MC-MBO-WebPublishingTeam/ASP-presentation: 
+MC-MBO-WebPublishingTeam/DW-Extension-HTMLinter: 
+MC-MBO-WebPublishingTeam/DW-Extension-IC-Styling: 
+MC-MBO-WebPublishingTeam/DW-Extension-MC-TOC: 
+RAMP-PCAR/RAMP-PCAR: 
+RAMP-PCAR/ramp-pcar-dist: 
+RAMP-PCAR/ramp-pcar-docs: 
+RAMP-PCAR/RAMP-PCAR.github.io: 
+RAMP-PCAR/ramp-scripts: 
+RAMP-PCAR/ramp-theme-canada: 
+RAMP-PCAR/ramp-theme-dist: 
+RAMP-PCAR/ramp-theme-fgp-int: 
+RAMP-PCAR/ramp-theme-intranet: 
+RAMP-PCAR/ramp-theme-usability: 
+RAMP-PCAR/ramp-wet-dep: 
+RAMP-PCAR/RCS: 
+RAMP-PCAR/terraformer-proj4js:
+  id: MIT
+  url: https://github.com/RAMP-PCAR/terraformer-proj4js/blob/master/LICENSE
+RAMP-PCAR/test-pages: 
+ServiceCanada/gc-departments:
+  id: MIT
+  url: https://github.com/ServiceCanada/gc-departments/blob/master/package.json
+  confidence: 90
+ServiceCanada/menu-changes: 
+ServiceCanada/wet-boew-wb-disable:
+  id: Artistic-2.0
+  url: https://github.com/ServiceCanada/wet-boew-wb-disable/blob/gh-pages/Licence-fr.html
+  confidence: 8.663366336633663
+TBS-EACPD/PSES: 
+TBS-EACPD/spiders: 
+GeoCanViz/GeoCanAut: 
+GeoCanViz/GeoCanViz: 
