@@ -1,182 +1,138 @@
 ---
 AAFC-MBB/acceptor:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/acceptor/blob/master/LICENSE
 AAFC-MBB/android-mock-ws:
   id: 
-  key: other
   url: https://github.com/AAFC-MBB/android-mock-ws/blob/master/LICENSE
 AAFC-MBB/android-real-ws:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/android-real-ws/blob/master/LICENSE
 AAFC-MBB/annotation-scripts:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/annotation-scripts/blob/master/LICENSE
 AAFC-MBB/AODP_releases:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/AODP_releases/blob/master/LICENSE
 AAFC-MBB/biocluster-playbook:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/biocluster-playbook/blob/master/LICENSE
 AAFC-MBB/blackbox-pipeline:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/blackbox-pipeline/blob/dev/LICENSE
 AAFC-MBB/blastdb_dynamo:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/blastdb_dynamo/blob/master/LICENSE
 AAFC-MBB/blazegraph_extras: 
 AAFC-MBB/bold2blast:
   id: LGPL-3.0
-  key: lgpl-3.0
   url: https://github.com/AAFC-MBB/bold2blast/blob/master/LICENSE
 AAFC-MBB/cookiemonster2:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/cookiemonster2/blob/master/LICENSE
 AAFC-MBB/crti-assembly-pipeline:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/crti-assembly-pipeline/blob/master/LICENSE
 AAFC-MBB/docker-assembly:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/docker-assembly/blob/master/LICENSE
 AAFC-MBB/dockerfiles:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/dockerfiles/blob/master/LICENSE
 AAFC-MBB/Galaxy: 
 AAFC-MBB/galaxy-PwParam:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/galaxy-PwParam/blob/master/LICENSE
 AAFC-MBB/gbif-ipt-vagrant:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/gbif-ipt-vagrant/blob/master/LICENSE
 AAFC-MBB/gflow:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/gflow/blob/master/LICENSE
 AAFC-MBB/HostPathogenLuceneIndexer:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/HostPathogenLuceneIndexer/blob/master/LICENSE
 AAFC-MBB/HostPathogenLuceneSearcher:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/HostPathogenLuceneSearcher/blob/master/LICENSE
 AAFC-MBB/hpdb:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/hpdb/blob/master/LICENSE
 AAFC-MBB/ITISProxy:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/ITISProxy/blob/master/LICENSE
 AAFC-MBB/ITISProxyLoader:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/ITISProxyLoader/blob/master/LICENSE
 AAFC-MBB/LicenseFixer:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/LicenseFixer/blob/master/LICENSE
 AAFC-MBB/matiri:
   id: 
-  key: other
   url: https://github.com/AAFC-MBB/matiri/blob/master/LICENSE
 AAFC-MBB/MBB-Bio-Roll:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/MBB-Bio-Roll/blob/master/LICENSE
 AAFC-MBB/MBB-Bio-Roll-Docker:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/MBB-Bio-Roll-Docker/blob/master/LICENSE
 AAFC-MBB/NGSSampleManager:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/NGSSampleManager/blob/master/LICENSE
 AAFC-MBB/parallel_itsx:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/parallel_itsx/blob/master/LICENSE
 AAFC-MBB/puppet-manifests:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/puppet-manifests/blob/master/LICENSE
 AAFC-MBB/pybold:
   id: LGPL-3.0
-  key: lgpl-3.0
   url: https://github.com/AAFC-MBB/pybold/blob/master/LICENSE
 AAFC-MBB/qsub-omics:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/qsub-omics/blob/master/LICENSE
 AAFC-MBB/RemoveSpecReplicate:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/RemoveSpecReplicate/blob/master/LICENSE
 AAFC-MBB/rpmout:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/rpmout/blob/master/LICENSE
 AAFC-MBB/rpmpaths:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/rpmpaths/blob/master/LICENSE
 AAFC-MBB/sge-puppet:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/sge-puppet/blob/master/LICENSE
 AAFC-MBB/snakemake-mothur:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/snakemake-mothur/blob/master/LICENSE
 AAFC-MBB/snakemake-trimmomatic:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/snakemake-trimmomatic/blob/master/LICENSE
 AAFC-MBB/snakemake-workflows:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/snakemake-workflows/blob/master/LICENSE
 AAFC-MBB/unitedb-py: 
 AAFC-MBB/vagrant-aws:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/vagrant-aws/blob/master/LICENSE
 AAFC-MBB/vagrant-galaxy-puppet:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/vagrant-galaxy-puppet/blob/master/LICENSE
 AAFC-MBB/vagrant-specify7:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/vagrant-specify7/blob/master/LICENSE
 AAFC-MBB/xlsx2redmine:
   id: MIT
-  key: mit
   url: https://github.com/AAFC-MBB/xlsx2redmine/blob/master/LICENSE
 ECCC-MSC/MetOceanOWS:
   id: GPL-3.0
-  key: gpl-3.0
   url: https://github.com/ECCC-MSC/MetOceanOWS/blob/master/LICENSE
 GeoCanViz/GeoCanAut:
   id: 
-  key: other
   url: https://github.com/GeoCanViz/GeoCanAut/blob/master/License.txt
 GeoCanViz/GeoCanViz:
   id: 
-  key: other
   url: https://github.com/GeoCanViz/GeoCanViz/blob/master/License.txt
 MC-MBO-WebPublishingTeam/ASP-presentation: 
 MC-MBO-WebPublishingTeam/DW-Extension-HTMLinter: 
@@ -186,11 +142,9 @@ RAMP-PCAR/RAMP-PCAR:
 RAMP-PCAR/ramp-pcar-dist: 
 RAMP-PCAR/ramp-pcar-docs:
   id: 
-  key: other
   url: https://github.com/RAMP-PCAR/ramp-pcar-docs/blob/master/license-en.md
 RAMP-PCAR/RAMP-PCAR.github.io:
   id: 
-  key: other
   url: https://github.com/RAMP-PCAR/RAMP-PCAR.github.io/blob/master/license-en.html
 RAMP-PCAR/ramp-scripts: 
 RAMP-PCAR/ramp-theme-canada: 
@@ -202,7 +156,6 @@ RAMP-PCAR/ramp-wet-dep:
 RAMP-PCAR/RCS: 
 RAMP-PCAR/terraformer-proj4js:
   id: MIT
-  key: mit
   url: https://github.com/RAMP-PCAR/terraformer-proj4js/blob/master/LICENSE
 RAMP-PCAR/test-pages: 
 ServiceCanada/gc-departments:
@@ -212,7 +165,6 @@ ServiceCanada/gc-departments:
 ServiceCanada/menu-changes: 
 ServiceCanada/wet-boew-wb-disable:
   id: 
-  key: other
   url: https://github.com/ServiceCanada/wet-boew-wb-disable/blob/gh-pages/License-en.html
 TBS-EACPD/PSES: 
 TBS-EACPD/spiders: 
@@ -220,21 +172,17 @@ canada-ca/regs-consult-wet:
 canada-ca/welcome: 
 CommunicationsSecurityEstablishment/spartacus:
   id: GPL-2.0
-  key: gpl-2.0
   url: https://github.com/CommunicationsSecurityEstablishment/spartacus/blob/master/LICENSE.md
 nrc-cnrc/AMBER: 
 nrc-cnrc/EGSnrc:
   id: AGPL-3.0
-  key: agpl-3.0
   url: https://github.com/nrc-cnrc/EGSnrc/blob/master/LICENCE
 nrc-cnrc/HTML5-whiteboard:
   id: MIT
-  key: mit
   url: https://github.com/nrc-cnrc/HTML5-whiteboard/blob/master/LICENCE
 nrc-cnrc/InuktitutToolkit: 
 nrc-cnrc/Raith_GDSII:
   id: MPL-2.0
-  key: mpl-2.0
   url: https://github.com/nrc-cnrc/Raith_GDSII/blob/master/LICENSE
 NRCan/hello: 
 open-data/ati-summaries: 
@@ -243,21 +191,17 @@ open-data/ckan-virtual-library-import:
 open-data/ckanext-autodoc: 
 open-data/ckanext-canada:
   id: 
-  key: other
   url: https://github.com/open-data/ckanext-canada/blob/master/COPYING
 open-data/ckanext-canada-ckan-1.8:
   id: 
-  key: other
   url: https://github.com/open-data/ckanext-canada-ckan-1.8/blob/master/COPYING
 open-data/ckanext-cloudstorage: 
 open-data/ckanext-drupal:
   id: 
-  key: other
   url: https://github.com/open-data/ckanext-drupal/blob/master/COPYING
 open-data/ckanext-extendedactivity: 
 open-data/ckanext-fgp:
   id: MIT
-  key: mit
   url: https://github.com/open-data/ckanext-fgp/blob/master/LICENSE
 open-data/ckanext-history: 
 open-data/ckanext-recombinant: 
@@ -265,103 +209,82 @@ open-data/ckanext-repeating:
 open-data/ckanext-stcndm: 
 open-data/ckanext-virtual-library:
   id: MIT
-  key: mit
   url: https://github.com/open-data/ckanext-virtual-library/blob/master/LICENSE
 open-data/ckanext-wet-boew: 
 open-data/dataset-generator-sqlbased: 
 open-data/dataset-generator-webscraper: 
 open-data/docker-ndm:
   id: MIT
-  key: mit
   url: https://github.com/open-data/docker-ndm/blob/master/LICENSE
 open-data/harvester-FGP: 
 open-data/hnap: 
 open-data/ndm-autocomplete:
   id: MIT
-  key: mit
   url: https://github.com/open-data/ndm-autocomplete/blob/master/LICENSE
 open-data/od:
   id: GPL-2.0
-  key: gpl-2.0
   url: https://github.com/open-data/od/blob/8.x-2.x/LICENSE.txt
 open-data/open-data:
   id: MIT
-  key: mit
   url: https://github.com/open-data/open-data/blob/master/LICENSE
 open-data/open-data.github.io: 
 open-data/opendata_package: 
 open-data/report-generator:
   id: MIT
-  key: mit
   url: https://github.com/open-data/report-generator/blob/master/LICENSE
 open-data/report-PD-QA: 
 open-data/site-open-data: 
 open-data/tweakextras: 
 phac-nml/dynamic-tool-destination:
   id: Apache-2.0
-  key: apache-2.0
   url: https://github.com/phac-nml/dynamic-tool-destination/blob/develop/LICENSE.txt
 phac-nml/ecoli_serotyping:
   id: Apache-2.0
-  key: apache-2.0
   url: https://github.com/phac-nml/ecoli_serotyping/blob/master/LICENSE
 phac-nml/galaxy_tools:
   id: GPL-2.0
-  key: gpl-2.0
   url: https://github.com/phac-nml/galaxy_tools/blob/master/LICENSE
 phac-nml/irida:
   id: Apache-2.0
-  key: apache-2.0
   url: https://github.com/phac-nml/irida/blob/development/LICENSE
 phac-nml/irida-galaxy-importer:
   id: Apache-2.0
-  key: apache-2.0
   url: https://github.com/phac-nml/irida-galaxy-importer/blob/development/LICENSE
 phac-nml/irida-linker: 
 phac-nml/irida-miseq-uploader:
   id: Apache-2.0
-  key: apache-2.0
   url: https://github.com/phac-nml/irida-miseq-uploader/blob/development/LICENSE
 phac-nml/neptune:
   id: Apache-2.0
-  key: apache-2.0
   url: https://github.com/phac-nml/neptune/blob/release/1.2/LICENSE.txt
 phac-nml/PUBS2015: 
 phac-nml/snvphyl-galaxy:
   id: Apache-2.0
-  key: apache-2.0
   url: https://github.com/phac-nml/snvphyl-galaxy/blob/master/LICENSE
 phac-nml/snvphyl-galaxy-cli:
   id: Apache-2.0
-  key: apache-2.0
   url: https://github.com/phac-nml/snvphyl-galaxy-cli/blob/development/LICENSE
 phac-nml/snvphyl-tools:
   id: Apache-2.0
-  key: apache-2.0
   url: https://github.com/phac-nml/snvphyl-tools/blob/master/LICENSE
 pspc-spac/pwgsc-drupal:
   id: 
-  key: other
   url: https://github.com/pspc-spac/pwgsc-drupal/blob/master/LICENSE.txt
 tbs-sct/GCcollab:
   id: 
-  key: other
   url: https://github.com/tbs-sct/GCcollab/blob/gccollab/LICENSE.txt
 tbs-sct/gcconnex:
   id: 
-  key: other
   url: https://github.com/tbs-sct/gcconnex/blob/gcconnex/LICENSE.txt
 tbs-sct/gcconnex-humhub: 
 tbs-sct/gcpedia:
   id: GPL-2.0
-  key: gpl-2.0
   url: https://github.com/tbs-sct/gcpedia/blob/gcpedia/COPYING
 tbs-sct/tbs-sct.github.io: 
 wet-boew/codefest: 
 wet-boew/codefest-transcripts: 
 wet-boew/GCWeb:
   id: 
-  key: other
   url: https://github.com/wet-boew/GCWeb/blob/master/License-en.txt
 wet-boew/gcweb-experimental:
   id: MIT
@@ -369,89 +292,71 @@ wet-boew/gcweb-experimental:
   confidence: 90
 wet-boew/generator-wet-boew-theme:
   id: 
-  key: other
   url: https://github.com/wet-boew/generator-wet-boew-theme/blob/master/License-en.txt
 wet-boew/grunt-cssmin-ie8-clean:
   id: MIT
-  key: mit
   url: https://github.com/wet-boew/grunt-cssmin-ie8-clean/blob/master/LICENSE
 wet-boew/grunt-i18n-csv:
   id: MIT
-  key: mit
   url: https://github.com/wet-boew/grunt-i18n-csv/blob/master/LICENSE
 wet-boew/grunt-usemin-assets:
   id: MIT
-  key: mit
   url: https://github.com/wet-boew/grunt-usemin-assets/blob/master/LICENSE
 wet-boew/grunt-wet-boew-postbuild:
   id: MIT
-  key: mit
   url: https://github.com/wet-boew/grunt-wet-boew-postbuild/blob/master/LICENSE
 wet-boew/node-git-simple:
   id: MIT
-  key: mit
   url: https://github.com/wet-boew/node-git-simple/blob/master/LICENSE
 wet-boew/ol3:
   id: BSD-2-Clause
-  key: bsd-2-clause
   url: https://github.com/wet-boew/ol3/blob/master/LICENSE.md
 wet-boew/openlayers:
   id: BSD-2-Clause
-  key: bsd-2-clause
   url: https://github.com/wet-boew/openlayers/blob/master/license.txt
 wet-boew/openlayers-dist:
   id: BSD-2-Clause
-  key: bsd-2-clause
   url: https://github.com/wet-boew/openlayers-dist/blob/master/license.txt
 wet-boew/spring-boot-thymeleaf:
   id: MIT
-  key: mit
   url: https://github.com/wet-boew/spring-boot-thymeleaf/blob/master/LICENSE
 wet-boew/techspecs: 
 wet-boew/theme-base:
   id: 
-  key: other
   url: https://github.com/wet-boew/theme-base/blob/master/License-en.txt
 wet-boew/theme-gc-intranet:
   id: 
-  key: other
   url: https://github.com/wet-boew/theme-gc-intranet/blob/master/License-en.txt
 wet-boew/theme-gcweb: 
 wet-boew/theme-gcwu-fegc:
   id: 
-  key: other
   url: https://github.com/wet-boew/theme-gcwu-fegc/blob/master/License-en.txt
 wet-boew/theme-ogpl:
   id: 
-  key: other
   url: https://github.com/wet-boew/theme-ogpl/blob/master/License-en.txt
 wet-boew/themes-cdn: 
 wet-boew/themes-dist: 
 wet-boew/web-reporting: 
 wet-boew/wet-boew:
   id: 
-  key: other
   url: https://github.com/wet-boew/wet-boew/blob/master/License-en.txt
 wet-boew/wet-boew-aem: 
 wet-boew/wet-boew-api: 
 wet-boew/wet-boew-api-standards: 
 wet-boew/wet-boew-attachments:
   id: 
-  key: other
   url: https://github.com/wet-boew/wet-boew-attachments/blob/master/License-en.txt
 wet-boew/wet-boew-cdn: 
 wet-boew/wet-boew-ckeditor: 
 wet-boew/wet-boew-codecharge: 
 wet-boew/wet-boew-dist:
   id: 
-  key: other
   url: https://github.com/wet-boew/wet-boew-dist/blob/v4.0-dist/License-en.txt
 wet-boew/wet-boew-dist-legacy: 
 wet-boew/wet-boew-docpad: 
 wet-boew/wet-boew-documentation: 
 wet-boew/wet-boew-dotnet:
   id: 
-  key: other
   url: https://github.com/wet-boew/wet-boew-dotnet/blob/master/License-en.txt
 wet-boew/wet-boew-dotnetnuke: 
 wet-boew/wet-boew-drupal: 
@@ -459,12 +364,10 @@ wet-boew/wet-boew-drupal8:
 wet-boew/wet-boew-elgg: 
 wet-boew/wet-boew-epub:
   id: 
-  key: other
   url: https://github.com/wet-boew/wet-boew-epub/blob/master/License-en.txt
 wet-boew/wet-boew-experimental: 
 wet-boew/wet-boew-hugo:
   id: MIT
-  key: mit
   url: https://github.com/wet-boew/wet-boew-hugo/blob/master/LICENSE.md
 wet-boew/wet-boew-java-maven:
   id: MIT
@@ -472,20 +375,17 @@ wet-boew/wet-boew-java-maven:
   confidence: 90
 wet-boew/wet-boew-jekyll:
   id: 
-  key: other
   url: https://github.com/wet-boew/wet-boew-jekyll/blob/master/License-en.txt
 wet-boew/wet-boew-joomla: 
 wet-boew/wet-boew-legacy: 
 wet-boew/wet-boew-mobiledevicebasedapps: 
 wet-boew/wet-boew-moodle:
   id: GPL-3.0
-  key: gpl-3.0
   url: https://github.com/wet-boew/wet-boew-moodle/blob/master/license.txt
 wet-boew/wet-boew-multimedia-fallback: 
 wet-boew/wet-boew-php: 
 wet-boew/wet-boew-release:
   id: MIT
-  key: mit
   url: https://github.com/wet-boew/wet-boew-release/blob/master/LICENSE
 wet-boew/wet-boew-sharepoint: 
 wet-boew/wet-boew-ssi: 
@@ -496,15 +396,12 @@ wet-boew/wet-boew-styleguide:
   confidence: 90
 wet-boew/wet-boew-wordpress:
   id: 
-  key: other
   url: https://github.com/wet-boew/wet-boew-wordpress/blob/master/License-en.txt
 wet-boew/wet-boew-wpss:
   id: 
-  key: other
   url: https://github.com/wet-boew/wet-boew-wpss/blob/master/License-en.txt
 wet-boew/wet-boew-xsl:
   id: 
-  key: other
   url: https://github.com/wet-boew/wet-boew-xsl/blob/master/License-eng.txt
 wet-boew/wet-boew.github.io: 
 wet-boew/wiwg_api_current-infrastructure: 
