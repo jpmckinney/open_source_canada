@@ -408,3 +408,508 @@ wet-boew/wiwg_api_current-infrastructure:
 wet-boew/wiwg_api_use-cases: 
 wet-boew/wiwg_html-data_core-types: 
 wet-boew/wiwg_html-data_use-cases: 
+abgov/ab-compensation-transparency-toolkit:
+  id: MIT
+  url: https://github.com/abgov/ab-compensation-transparency-toolkit/blob/gh-pages/LICENSE
+abgov/ckanext-ab_scheming:
+  id: AGPL-3.0
+  url: https://github.com/abgov/ckanext-ab_scheming/blob/master/LICENSE
+abgov/ckanext-open_alberta: 
+abgov/ckanext-geomapviewer: 
+abgov/ckanext-classification:
+  id: AGPL-3.0
+  url: https://github.com/abgov/ckanext-classification/blob/master/LICENSE
+abgov/ckanext-workflow:
+  id: AGPL-3.0
+  url: https://github.com/abgov/ckanext-workflow/blob/master/LICENSE
+BCDevExchange/BCDevExchange-app:
+  id: Apache-2.0
+  url: https://github.com/BCDevExchange/BCDevExchange-app/blob/master/LICENSE
+BCDevExchange/Our-Project-Docs:
+  id: 
+  url: https://github.com/BCDevExchange/Our-Project-Docs/blob/master/LICENSE.md
+BCDevExchange/ckanext-wso2-harvester:
+  id: Apache-2.0
+  url: https://github.com/BCDevExchange/ckanext-wso2-harvester/blob/master/LICENSE
+BCDevExchange/API-Management: 
+BCDevExchange/BCDevExchange-Resources:
+  id: Apache-2.0
+  url: https://github.com/BCDevExchange/BCDevExchange-Resources/blob/master/LICENSE
+BCDevExchange/BCDevExchange-Projects:
+  id: 
+  url: https://github.com/BCDevExchange/BCDevExchange-Projects/blob/master/LICENSE
+BCDevExchange/Guides-Templates-Etc:
+  id: 
+  url: https://github.com/BCDevExchange/Guides-Templates-Etc/blob/master/LICENSE
+BCDevExchange/BCDevExchange-Programs:
+  id: 
+  url: https://github.com/BCDevExchange/BCDevExchange-Programs/blob/master/LICENSE.md
+BCDevExchange/garbage-day:
+  id: 
+  url: https://github.com/BCDevExchange/garbage-day/blob/master/LICENSE
+BCDevExchange/RA-Documents:
+  id: 
+  url: https://github.com/BCDevExchange/RA-Documents/blob/master/LICENSE
+BCDevExchange/cemetery-information:
+  id: 
+  url: https://github.com/BCDevExchange/cemetery-information/blob/master/LICENSE
+BCDevExchange/WORKPLAN:
+  id: 
+  url: https://github.com/BCDevExchange/WORKPLAN/blob/master/LICENSE
+BCDevExchange/bc-property-api-specification:
+  id: 
+  url: https://github.com/BCDevExchange/bc-property-api-specification/blob/master/LICENSE
+BCDevExchange/rapid-adoption:
+  id: 
+  url: https://github.com/BCDevExchange/rapid-adoption/blob/master/LICENSE
+BCDevExchange/bca-api:
+  id: Apache-2.0
+  url: https://github.com/BCDevExchange/bca-api/blob/master/LICENSE
+BCDevExchange/blog:
+  id: Apache-2.0
+  url: https://github.com/BCDevExchange/blog/blob/gh-pages/LICENSE
+BCDevExchange/pay-for-pull-epic-research:
+  id: 
+  url: https://github.com/BCDevExchange/pay-for-pull-epic-research/blob/master/LICENSE.0
+BCDevExchange/BCDevExchange-Site:
+  id: Apache-2.0
+  url: https://github.com/BCDevExchange/BCDevExchange-Site/blob/master/LICENSE
+BCDevExchange/BCDevExchange-mini-apps:
+  id: Apache-2.0
+  url: https://github.com/BCDevExchange/BCDevExchange-mini-apps/blob/master/LICENSE
+BCDevExchange/open-opps-dev: 
+BCDevExchange/zurmo: 
+BCDevExchange/code-with-us:
+  id: 
+  url: https://github.com/BCDevExchange/code-with-us/blob/master/LICENCE.md
+BCDevExchange/design:
+  id: Apache-2.0
+  url: https://github.com/BCDevExchange/design/blob/master/LICENSE
+BCDevExchange/devex:
+  id: Apache-2.0
+  url: https://github.com/BCDevExchange/devex/blob/master/LICENSE.md
+BCDevExchange/mysql-docker:
+  id: Apache-2.0
+  url: https://github.com/BCDevExchange/mysql-docker/blob/master/LICENSE
+BCDevExchange/mean-starter:
+  id: Apache-2.0
+  url: https://github.com/BCDevExchange/mean-starter/blob/master/LICENSE
+bcgov/wqbc:
+  id: Apache-2.0
+  url: https://github.com/bcgov/wqbc/blob/master/LICENSE
+bcgov/BC-Policy-Framework-For-GitHub:
+  id: 
+  url: https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/LICENSE
+bcgov/bcgroundwater:
+  id: Apache-2.0
+  url: https://github.com/bcgov/bcgroundwater/blob/master/LICENSE
+bcgov/groundwater-levels:
+  id: Apache-2.0
+  url: https://github.com/bcgov/groundwater-levels/blob/master/LICENSE
+bcgov/EnvReportBC:
+  id: 
+  url: https://github.com/bcgov/EnvReportBC/blob/master/LICENSE
+bcgov/envreportutils:
+  id: Apache-2.0
+  url: https://github.com/bcgov/envreportutils/blob/master/LICENSE
+bcgov/CSB-eFile:
+  id: Apache-2.0
+  url: https://github.com/bcgov/CSB-eFile/blob/master/LICENSE
+bcgov/ckanext-bcgov:
+  id: AGPL-3.0
+  url: https://github.com/bcgov/ckanext-bcgov/blob/master/license
+bcgov/bcmaps:
+  id: 
+  url: https://github.com/bcgov/bcmaps/blob/master/LICENSE
+bcgov/dbcrss:
+  id: Apache-2.0
+  url: https://github.com/bcgov/dbcrss/blob/master/LICENSE
+bcgov/bc-laws-api:
+  id: 
+  url: https://github.com/bcgov/bc-laws-api/blob/master/LICENSE.0
+bcgov/rcaaqs:
+  id: Apache-2.0
+  url: https://github.com/bcgov/rcaaqs/blob/master/LICENSE
+bcgov/ozone-caaqs-analysis:
+  id: Apache-2.0
+  url: https://github.com/bcgov/ozone-caaqs-analysis/blob/master/LICENSE
+bcgov/pm25-caaqs-analysis:
+  id: Apache-2.0
+  url: https://github.com/bcgov/pm25-caaqs-analysis/blob/master/LICENSE
+bcgov/citizen-engagement-web-toolkit:
+  id: 
+  url: https://github.com/bcgov/citizen-engagement-web-toolkit/blob/master/LICENSE
+bcgov/OCIO-integrated-planning:
+  id: 
+  url: https://github.com/bcgov/OCIO-integrated-planning/blob/master/License
+bcgov/esm-server:
+  id: Apache-2.0
+  url: https://github.com/bcgov/esm-server/blob/develop/LICENSE
+bcgov/OCIO-service-development:
+  id: 
+  url: https://github.com/bcgov/OCIO-service-development/blob/master/LICENSE
+bcgov/ltema:
+  id: Apache-2.0
+  url: https://github.com/bcgov/ltema/blob/master/LICENSE
+bcgov/bearmon:
+  id: Apache-2.0
+  url: https://github.com/bcgov/bearmon/blob/master/LICENSE
+bcgov/openconsult: 
+bcgov/aspb-planning:
+  id: CC0-1.0
+  url: https://github.com/bcgov/aspb-planning/blob/master/LICENSE
+bcgov/protected-lands-and-waters-analysis:
+  id: Apache-2.0
+  url: https://github.com/bcgov/protected-lands-and-waters-analysis/blob/master/LICENSE
+bcgov/bc-population-indicator:
+  id: Apache-2.0
+  url: https://github.com/bcgov/bc-population-indicator/blob/master/LICENSE
+bcgov/data-fp:
+  id: MIT
+  url: https://github.com/bcgov/data-fp/blob/master/LICENSE
+bcgov/nrs-sparx-automation:
+  id: Apache-2.0
+  url: https://github.com/bcgov/nrs-sparx-automation/blob/master/LICENSE
+bcgov/cpf:
+  id: Apache-2.0
+  url: https://github.com/bcgov/cpf/blob/5.0.x/LICENSE
+bcgov/drivebc-webcam-api:
+  id: 
+  url: https://github.com/bcgov/drivebc-webcam-api/blob/master/LICENSE
+bcgov/databc-web-map-services:
+  id: 
+  url: https://github.com/bcgov/databc-web-map-services/blob/master/LICENSE
+bcgov/agile-guide:
+  id: 
+  url: https://github.com/bcgov/agile-guide/blob/18f-pages/LICENSE.md
+bcgov/innovation-toolkit:
+  id: Apache-2.0
+  url: https://github.com/bcgov/innovation-toolkit/blob/master/LICENSE.md
+bcgov/mode1-guide:
+  id: 
+  url: https://github.com/bcgov/mode1-guide/blob/18f-pages/LICENSE.md
+bcgov/eba-guide:
+  id: 
+  url: https://github.com/bcgov/eba-guide/blob/18f-pages/LICENSE.md
+bcgov/work-item-aggregator: 
+bcgov/segmentation-guide:
+  id: 
+  url: https://github.com/bcgov/segmentation-guide/blob/18f-pages/LICENSE.md
+bcgov/REST-API-Development-Guide:
+  id: 
+  url: https://github.com/bcgov/REST-API-Development-Guide/blob/18f-pages/LICENSE.md
+bcgov/data-driven-decision-making:
+  id: 
+  url: https://github.com/bcgov/data-driven-decision-making/blob/master/LICENSE.md
+bcgov/guide-of-guides:
+  id: 
+  url: https://github.com/bcgov/guide-of-guides/blob/18f-pages/LICENSE.md
+bcgov/bcdc-devops:
+  id: MIT
+  url: https://github.com/bcgov/bcdc-devops/blob/master/LICENSE
+bcgov/data-driven-decision-making-guide:
+  id: 
+  url: https://github.com/bcgov/data-driven-decision-making-guide/blob/18f-pages/LICENSE.md
+bcgov/github-guide:
+  id: 
+  url: https://github.com/bcgov/github-guide/blob/18f-pages/LICENSE.md
+bcgov/citizens-at-the-centre:
+  id: 
+  url: https://github.com/bcgov/citizens-at-the-centre/blob/18f-pages/LICENSE.md
+bcgov/data-fp-features:
+  id: Apache-2.0
+  url: https://github.com/bcgov/data-fp-features/blob/master/LICENSE
+bcgov/issue-aggregator:
+  id: Apache-2.0
+  url: https://github.com/bcgov/issue-aggregator/blob/master/LICENSE
+bcgov/api-specs:
+  id: 
+  url: https://github.com/bcgov/api-specs/blob/master/LICENSE.md
+bcgov/DevEx-Roadmap:
+  id: 
+  url: https://github.com/bcgov/DevEx-Roadmap/blob/18f-pages/LICENSE.md
+bcgov/interactive-infographic:
+  id: 
+  url: https://github.com/bcgov/interactive-infographic/blob/master/LICENSE.0
+bcgov/service-patterns: 
+bcgov/service-analytics-framework: 
+bcgov/pay-for-pull-epic-research: 
+bcgov/guide-for-open-source-projects:
+  id: 
+  url: https://github.com/bcgov/guide-for-open-source-projects/blob/18f-pages/LICENSE.md
+bcgov/PMO-Database:
+  id: Apache-2.0
+  url: https://github.com/bcgov/PMO-Database/blob/master/LICENSE
+bcgov/rems:
+  id: Apache-2.0
+  url: https://github.com/bcgov/rems/blob/master/LICENSE
+bcgov/FGDB-Standards-Tools:
+  id: Apache-2.0
+  url: https://github.com/bcgov/FGDB-Standards-Tools/blob/master/LICENSE
+bcgov/ghg-emissions-indicator:
+  id: Apache-2.0
+  url: https://github.com/bcgov/ghg-emissions-indicator/blob/master/LICENSE
+bcgov/ols-devkit:
+  id: Apache-2.0
+  url: https://github.com/bcgov/ols-devkit/blob/master/LICENSE
+bcgov/MyGovBC-core-server:
+  id: Apache-2.0
+  url: https://github.com/bcgov/MyGovBC-core-server/blob/master/LICENSE
+bcgov/MyGovBC-core-client:
+  id: Apache-2.0
+  url: https://github.com/bcgov/MyGovBC-core-client/blob/master/LICENSE
+bcgov/MyGovBC-core-headerFooterService:
+  id: MIT
+  url: https://github.com/bcgov/MyGovBC-core-headerFooterService/blob/master/LICENSE
+bcgov/MyGovBC-notification-server:
+  id: Apache-2.0
+  url: https://github.com/bcgov/MyGovBC-notification-server/blob/master/LICENSE
+bcgov/MyGovBC-widget-sharedservices-foodsafe:
+  id: Apache-2.0
+  url: https://github.com/bcgov/MyGovBC-widget-sharedservices-foodsafe/blob/master/LICENSE
+bcgov/MyGovBC-widget-info-template:
+  id: Apache-2.0
+  url: https://github.com/bcgov/MyGovBC-widget-info-template/blob/master/LICENSE
+bcgov/BCStats: 
+bcgov/WES-engagement-states:
+  id: Apache-2.0
+  url: https://github.com/bcgov/WES-engagement-states/blob/master/LICENSE
+bcgov/simple-R-shiny: 
+bcgov/distance-calculator:
+  id: Apache-2.0
+  url: https://github.com/bcgov/distance-calculator/blob/master/LICENSE
+bcgov/process-air-data:
+  id: Apache-2.0
+  url: https://github.com/bcgov/process-air-data/blob/master/LICENSE
+bcgov/climate-change-indicators-2015:
+  id: Apache-2.0
+  url: https://github.com/bcgov/climate-change-indicators-2015/blob/master/LICENSE
+bcgov/tire-recycling-indicator:
+  id: Apache-2.0
+  url: https://github.com/bcgov/tire-recycling-indicator/blob/master/LICENSE
+bcgov/invasive-species-indicator:
+  id: Apache-2.0
+  url: https://github.com/bcgov/invasive-species-indicator/blob/master/LICENSE
+bcgov/update-VRI-volumes:
+  id: Apache-2.0
+  url: https://github.com/bcgov/update-VRI-volumes/blob/master/LICENSE
+bcgov/cccharts:
+  id: Apache-2.0
+  url: https://github.com/bcgov/cccharts/blob/master/LICENSE
+bcgov/mygovbc: 
+bcgov/WES-demographic-profile:
+  id: Apache-2.0
+  url: https://github.com/bcgov/WES-demographic-profile/blob/master/LICENSE
+bcgov/mygovbc-nginx:
+  id: Apache-2.0
+  url: https://github.com/bcgov/mygovbc-nginx/blob/master/LICENSE
+bcgov/mygovbc-foodsafe-nginx:
+  id: Apache-2.0
+  url: https://github.com/bcgov/mygovbc-foodsafe-nginx/blob/master/LICENSE
+bcgov/mamcgirr_test: 
+bcgov/water-quality-analysis:
+  id: Apache-2.0
+  url: https://github.com/bcgov/water-quality-analysis/blob/master/LICENSE
+bcgov/SecurityAwareness:
+  id: Apache-2.0
+  url: https://github.com/bcgov/SecurityAwareness/blob/master/LICENSE
+bcgov/MyGovBC-MSP:
+  id: Apache-2.0
+  url: https://github.com/bcgov/MyGovBC-MSP/blob/master/LICENSE
+bcgov/smtp-om-core:
+  id: Apache-2.0
+  url: https://github.com/bcgov/smtp-om-core/blob/master/LICENSE
+bcgov/burn-severity:
+  id: Apache-2.0
+  url: https://github.com/bcgov/burn-severity/blob/master/LICENSE
+bcgov/housing-data-visualization-project:
+  id: Apache-2.0
+  url: https://github.com/bcgov/housing-data-visualization-project/blob/master/LICENSE
+bcgov/CANSIM-data-viewer:
+  id: Apache-2.0
+  url: https://github.com/bcgov/CANSIM-data-viewer/blob/master/LICENSE
+bcgov/ckanext-openapiviewer:
+  id: MIT
+  url: https://github.com/bcgov/ckanext-openapiviewer/blob/master/LICENSE
+bcgov/BC-demography:
+  id: Apache-2.0
+  url: https://github.com/bcgov/BC-demography/blob/master/LICENSE
+bcgov/smtp-om-cas-common: 
+bcgov/slack-dev-bot-BCGov:
+  id: Apache-2.0
+  url: https://github.com/bcgov/slack-dev-bot-BCGov/blob/master/LICENSE.md
+bcgov/Mock-Server:
+  id: Apache-2.0
+  url: https://github.com/bcgov/Mock-Server/blob/master/LICENSE
+bcgov/Swagger-Editor:
+  id: Apache-2.0
+  url: https://github.com/bcgov/Swagger-Editor/blob/master/LICENSE
+bcgov/SchemaSpy:
+  id: Apache-2.0
+  url: https://github.com/bcgov/SchemaSpy/blob/master/LICENSE
+bcgov/Swagger-Codegen-Extension:
+  id: Apache-2.0
+  url: https://github.com/bcgov/Swagger-Codegen-Extension/blob/master/LICENSE
+bcgov/career-survey:
+  id: Apache-2.0
+  url: https://github.com/bcgov/career-survey/blob/master/LICENSE
+bcgov/mygovbc-foodsafe:
+  id: Apache-2.0
+  url: https://github.com/bcgov/mygovbc-foodsafe/blob/master/LICENSE
+bcgov/hets:
+  id: Apache-2.0
+  url: https://github.com/bcgov/hets/blob/master/LICENSE
+bcgov/MyGovBC-MSP-Service:
+  id: Apache-2.0
+  url: https://github.com/bcgov/MyGovBC-MSP-Service/blob/master/LICENSE
+bcgov/gwa:
+  id: Apache-2.0
+  url: https://github.com/bcgov/gwa/blob/master/LICENSE
+bcgov/batch-pdf-reports:
+  id: Apache-2.0
+  url: https://github.com/bcgov/batch-pdf-reports/blob/master/LICENSE.txt
+cityofgreatersudbury/cityofgreatersudbury.github.com: 
+cityofgreatersudbury/its4mobility:
+  id: MIT
+  url: https://github.com/cityofgreatersudbury/its4mobility/blob/master/LICENSE
+CityofOttawa/Apps4Ottawa-Website: 
+CityofOttawa/Ottawa-ckan:
+  id: 
+  url: https://github.com/CityofOttawa/Ottawa-ckan/blob/master/COPYING
+CityofOttawa/feeds_translation: 
+CityofOttawa/Popup_Survey: 
+CityofOttawa/ottawa_panelized_page_nav: 
+CityofOttawa/light_box_image_gallery: 
+CityofOttawa/immigration_zen: 
+CityofOttawa/ottawa_toggle_block: 
+CityofOttawa/ottawa_permits: 
+CityofOttawa/toc_formatter: 
+CityofOttawa/site_wide_warning: 
+CityofOttawa/ottdoc_make: 
+CityofOttawa/ottdoc_zen: 
+CityofOttawa/shibboleth_auth: 
+CityofOttawa/webform_sidkey:
+  id: GPL-2.0
+  url: https://github.com/CityofOttawa/webform_sidkey/blob/master/LICENSE
+CityofOttawa/webform_gmap_location: 
+CityofOttawa/ottawa_vjs_skin: 
+CityofOttawa/document_accessibility_report: 
+CityofOttawa/youth_portal_dashboard: 
+CityofOttawa/ott_image_styles: 
+CityofOttawa/spotlight_leaflet_map: 
+cityofsurrey/ckanext-surrey:
+  id: 
+  url: https://github.com/cityofsurrey/ckanext-surrey/blob/master/LICENSE.md
+cityofsurrey/javascript:
+  id: MIT
+  url: https://github.com/cityofsurrey/javascript/blob/master/LICENSE
+cityofsurrey/traffic-loops-api: 
+cityofsurrey/landscape-api:
+  id: MIT
+  url: https://github.com/cityofsurrey/landscape-api/blob/master/LICENSE
+cityofsurrey/taurus:
+  id: MIT
+  url: https://github.com/cityofsurrey/taurus/blob/master/LICENSE
+cityofsurrey/lurtz:
+  id: MIT
+  url: https://github.com/cityofsurrey/lurtz/blob/master/LICENSE
+cityofsurrey/landscape-node: 
+cityofsurrey/mysurrey-tests:
+  id: MIT
+  url: https://github.com/cityofsurrey/mysurrey-tests/blob/master/LICENSE
+cityofsurrey/selenium-grid:
+  id: MIT
+  url: https://github.com/cityofsurrey/selenium-grid/blob/master/LICENSE
+cityofsurrey/mysurrey-admin: 
+cityofsurrey/mongodb-ansible: 
+cityofsurrey/open511: 
+cityofsurrey/docker-node-oracle: 
+cityofsurrey/microsites-public: 
+cityofsurrey/mejai:
+  id: GPL-3.0
+  url: https://github.com/cityofsurrey/mejai/blob/master/LICENSE
+cityofsurrey/docker-node:
+  id: MIT
+  url: https://github.com/cityofsurrey/docker-node/blob/master/LICENSE
+cngo/dockerfiles: 
+cngo/nugeo-scripts: 
+cngo/cngo.ca-sage-theme:
+  id: MIT
+  url: https://github.com/cngo/cngo.ca-sage-theme/blob/master/LICENSE.md
+cngo/cngo.ca-functionality-plugin: 
+electionsquebec/PolygooMap:
+  id: Unlicense
+  url: https://github.com/electionsquebec/PolygooMap/blob/master/LICENSE
+fgpv-vpgf/fgpv-vpgf:
+  id: 
+  url: https://github.com/fgpv-vpgf/fgpv-vpgf/blob/master/LICENSE
+fgpv-vpgf/fgpv-vpgf.github.io: 
+fgpv-vpgf/fgpv-vpgf-dist: 
+fgpv-vpgf/gulp-i18n-csv:
+  id: 
+  url: https://github.com/fgpv-vpgf/gulp-i18n-csv/blob/master/license
+fgpv-vpgf/r2v-config-generator:
+  id: 
+  url: https://github.com/fgpv-vpgf/r2v-config-generator/blob/master/LICENSE
+fgpv-vpgf/rcs: 
+fgpv-vpgf/doc-site-sample:
+  id: Apache-2.0
+  url: https://github.com/fgpv-vpgf/doc-site-sample/blob/master/LICENSE
+fgpv-vpgf/geoApi:
+  id: 
+  url: https://github.com/fgpv-vpgf/geoApi/blob/master/LICENSE
+fgpv-vpgf/PAGER:
+  id: MIT
+  url: https://github.com/fgpv-vpgf/PAGER/blob/master/LICENSE
+fgpv-vpgf/svg.textflow.js: 
+GNWT/consistent-user-experience:
+  id: 
+  url: https://github.com/GNWT/consistent-user-experience/blob/master/LICENSE
+infra-geo-ouverte/site-web:
+  id: 
+  url: https://github.com/infra-geo-ouverte/site-web/blob/master/LICENCE.txt
+infra-geo-ouverte/igo:
+  id: 
+  url: https://github.com/infra-geo-ouverte/igo/blob/master/LICENCE.txt
+infra-geo-ouverte/puppet-igo:
+  id: 
+  url: https://github.com/infra-geo-ouverte/puppet-igo/blob/master/LICENCE.txt
+infra-geo-ouverte/igo-lib:
+  id: 
+  url: https://github.com/infra-geo-ouverte/igo-lib/blob/master/LICENCE.txt
+infra-geo-ouverte/module-demo:
+  id: 
+  url: https://github.com/infra-geo-ouverte/module-demo/blob/master/LICENCE.txt
+infra-geo-ouverte/igo2:
+  id: 
+  url: https://github.com/infra-geo-ouverte/igo2/blob/master/LICENCE.txt
+nsgov/tweetcache:
+  id: MIT
+  url: https://github.com/nsgov/tweetcache/blob/master/LICENSE
+nsgov/mobi: 
+nsgov/features: 
+nsgov/CLF-Templates-Argyle: 
+nsgov/Bridgewater-Theme-Drupal7:
+  id: GPL-2.0
+  url: https://github.com/nsgov/Bridgewater-Theme-Drupal7/blob/master/LICENSE.txt
+nsgov/DuckToller: 
+nsgov/data-analytics: 
+nsgov/patternlab: 
+nsgov/Saltire-Theme-Drupal7:
+  id: 
+  url: https://github.com/nsgov/Saltire-Theme-Drupal7/blob/master/LICENSE.txt
+nsgov/app-header-footer: 
+RDOQ/Accueil:
+  id: GPL-3.0
+  url: https://github.com/RDOQ/Accueil/blob/master/LICENSE
+RDOQ/TI-GVQ:
+  id: GPL-3.0
+  url: https://github.com/RDOQ/TI-GVQ/blob/master/LICENSE
+thecityofcalgary/Public_Art:
+  id: ISC
+  url: https://github.com/thecityofcalgary/Public_Art/blob/master/LICENSE
+VilledeMontreal/CKAN-Extension-Territoire: 
+VilledeMontreal/CKAN-Extension-Export-Utilisateurs: 
+VilledeMontreal/DefiInfoNeige-Gagnant1: 
+VilledeMontreal/DefiInfoNeige-Gagnant2: 
+VilledeMontreal/DefiInfoNeige-Gagnant3: 
