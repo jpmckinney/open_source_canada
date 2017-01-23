@@ -2,6 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 
 require 'fileutils'
+require 'set'
 require 'yaml'
 
 require 'faraday-http-cache'
@@ -23,50 +24,71 @@ namespace :licenses do
   desc "Write a licenses.yml file with each repository's license, according to GitHub"
   task :github do
     client = Octokit::Client.new(access_token: ENV['ACCESS_TOKEN'])
-
-    licenses = {}
-
     headers = {accept: 'application/vnd.github.drax-preview+json'}
 
-    Faraday.get('https://raw.githubusercontent.com/canada-ca/welcome/master/Organizations-Organisations.md').body.scan(/\(([a-z]+:[^)]+)\)/).sort.each do |url|
-      parsed = URI.parse(url[0])
-      if parsed.host['github.com']
-        organization_name = parsed.path.chomp('/').match(%r{/(\S+)})[1]
-        client.repos(organization_name, headers).reject(&:fork).each do |repo|
-          licenses[repo.full_name] = nil
+    licenses_filename = 'licenses.yml'
+    licenses = {}
 
-          if repo.license && repo.license.spdx_id
-            licenses[repo.full_name] = {
-              'id' => repo.license.spdx_id,
-              'url' => client.repository_license_contents(repo.full_name, headers).html_url,
-            }
-          elsif !Git.ls_remote(repo.html_url).empty?
-            Dir.mktmpdir do |dir|
-              # @see https://github.com/benbalter/licensee/blob/master/bin/licensee
-              git = Git.clone("git@github.com:#{repo.full_name}.git", dir)
+    if File.exist?(licenses_filename)
+      licenses = YAML.load(File.read(licenses_filename))
+    end
 
-              project = Licensee.project(dir, detect_packages: true, detect_readme: true)
-              matched_file = project.matched_file
+    if ENV['ORGS']
+      organization_names = ENV['ORGS'].split(',')
+    else
+      organization_names = Set.new
+      Faraday.get('https://raw.githubusercontent.com/canada-ca/welcome/master/Organizations-Organisations.md').body.scan(/\(([a-z]+:[^)]+)\)/).sort.each do |url|
+        parsed = URI.parse(url[0])
+        if parsed.host['github.com']
+          organization_names << parsed.path.chomp('/').match(%r{/(\S+)})[1]
+        end
+      end
+    end
 
-              if matched_file
-                if matched_file.license
-                  licenses[repo.full_name] = {
-                    'id' => matched_file.license.meta['spdx-id'],
-                    'url' => "https://github.com/#{repo.full_name}/blob/#{repo.default_branch}/#{matched_file.filename}",
-                    'confidence' => matched_file.confidence,
-                  }
-                elsif matched_file.is_a?(Licensee::Project::LicenseFile)
-                  matcher = Licensee::Matchers::Dice.new(matched_file)
-                  matches = matcher.licenses_by_similiarity
+    if ENV['REPOS']
+      repositories = ENV['REPOS'].split(',').map do |owner_repo|
+        client.repo(owner_repo, headers)
+      end
+    else
+      repositories = organization_names.flat_map do |organization_name|
+        client.repos(organization_name, headers.merge(type: 'sources'))
+      end
+    end
 
-                  unless matches.empty?
-                    licenses[repo.full_name] = {
-                      'id' => matches[0][0].meta['spdx-id'],
-                      'url' => "https://github.com/#{repo.full_name}/blob/#{repo.default_branch}/#{matched_file.filename}",
-                      'confidence' => matches[0][1],
-                    }
-                  end
-                end
+    repositories.each do |repo|
+      licenses[repo.full_name] = nil
+
+      if repo.license
+        licenses[repo.full_name] = {
+          'id' => repo.license.spdx_id,
+          'key' => repo.license.key,
+          'url' => client.repository_license_contents(repo.full_name, headers).html_url,
+        }
+      elsif !Git.ls_remote(repo.html_url).empty?
+        Dir.mktmpdir do |dir|
+          # @see https://github.com/benbalter/licensee/blob/master/bin/licensee
+          git = Git.clone("git@github.com:#{repo.full_name}.git", dir)
+
+          project = Licensee.project(dir, detect_packages: true, detect_readme: true)
+          matched_file = project.matched_file
+
+          if matched_file
+            if matched_file.license
+              licenses[repo.full_name] = {
+                'id' => matched_file.license.meta['spdx-id'],
+                'url' => "https://github.com/#{repo.full_name}/blob/#{repo.default_branch}/#{matched_file.filename}",
+                'confidence' => matched_file.confidence,
+              }
+            elsif matched_file.is_a?(Licensee::Project::LicenseFile)
+              matcher = Licensee::Matchers::Dice.new(matched_file)
+              matches = matcher.licenses_by_similiarity
+
+              unless matches.empty?
+                licenses[repo.full_name] = {
+                  'id' => matches[0][0].meta['spdx-id'],
+                  'url' => "https://github.com/#{repo.full_name}/blob/#{repo.default_branch}/#{matched_file.filename}",
+                  'confidence' => matches[0][1],
+                }
               end
             end
           end
@@ -74,7 +96,7 @@ namespace :licenses do
       end
     end
 
-    File.open('licenses.yml', 'w') do |f|
+    File.open(licenses_filename, 'w') do |f|
       f.write(YAML.dump(licenses))
     end
   end
