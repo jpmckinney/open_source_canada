@@ -873,23 +873,29 @@ GNWT/consistent-user-experience:
   id: 
   url: https://github.com/GNWT/consistent-user-experience/blob/master/LICENSE
 infra-geo-ouverte/site-web:
-  id: 
+  id: LiLiQ-R-1.1
   url: https://github.com/infra-geo-ouverte/site-web/blob/master/LICENCE.txt
+  confidence: 72.39263803680981
 infra-geo-ouverte/igo:
-  id: 
+  id: LiLiQ-R-1.1
   url: https://github.com/infra-geo-ouverte/igo/blob/master/LICENCE.txt
+  confidence: 71.68894289185906
 infra-geo-ouverte/puppet-igo:
-  id: 
+  id: LiLiQ-R-1.1
   url: https://github.com/infra-geo-ouverte/puppet-igo/blob/master/LICENCE.txt
+  confidence: 72.39263803680981
 infra-geo-ouverte/igo-lib:
-  id: 
+  id: LiLiQ-R-1.1
   url: https://github.com/infra-geo-ouverte/igo-lib/blob/master/LICENCE.txt
+  confidence: 71.60194174757282
 infra-geo-ouverte/module-demo:
-  id: 
+  id: LiLiQ-R-1.1
   url: https://github.com/infra-geo-ouverte/module-demo/blob/master/LICENCE.txt
+  confidence: 72.2154222766218
 infra-geo-ouverte/igo2:
-  id: 
+  id: LiLiQ-R-1.1
   url: https://github.com/infra-geo-ouverte/igo2/blob/master/LICENCE.txt
+  confidence: 72.1951219512195
 nsgov/tweetcache:
   id: MIT
   url: https://github.com/nsgov/tweetcache/blob/master/LICENSE

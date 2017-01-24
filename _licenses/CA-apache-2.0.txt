@@ -1,5 +1,5 @@
 ---
-title: Apache License 2.0 (CA)
+title: Apache License 2.0
 spdx-id: Apache-2.0
 
 using:

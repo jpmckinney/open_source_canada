@@ -14,17 +14,19 @@ Collect the licenses under which repositories are released on GitHub:
 
     bundle exec rake licenses:github
 
-### License repositories without licenses
+### Add licenses to repositories without licenses
 
-List the repositories without licenses:
+This section describes tools to submit pull requests to add licenses to repositories that don't have any.
+
+First, run the `licenses:github` task above. Then, list the repositories without licenses:
 
     bundle exec rake licenses:none
 
-List one organization's repositories without licenses:
+Or, list one organization's repositories without licenses:
 
     bundle exec rake licenses:none ORG=wet-boew
 
-List the repositories without licenses as a comma-separated list:
+Then, list the repositories without licenses as a comma-separated list:
 
     bundle exec rake licenses:none CSV=true
 
@@ -44,10 +46,46 @@ Then, add licenses to selected repositories (`REPOS`) and open a pull request on
 
 Once your pull requests are merged, you can easily remove the unneeded forks using [remove-github-forks](https://github.com/denis-sokolov/remove-github-forks/).
 
-### Review repositories with unknown licenses
+### Determine licenses of repositories with unrecognized licenses
 
-List the repositories with unknown licenses:
+This section describes tools to improve the `licenses:github` task's identification of licenses.
+
+First, run the `licenses:github` above. Then, list the repositories with unrecognized licenses:
 
     bundle exec rake licenses:unknown
+
+Or, list one organization's repositories with unrecognized licenses:
+
+    bundle exec rake licenses:none ORG=wet-boew
+
+Then, open each URL to inspect each license. If appropriate, create a file under `_licenses/` following the pattern `XX[-YY]-key-NOTE.txt` where:
+
+* `XX` is the ISO 3166-1 alpha-2 code of the jurisdiction using the license
+* `YY` is the second part of the ISO-3166-2 code of the jurisdiction using the license
+* If the license modifies a [choosealicense.com](https://github.com/benbalter/licensee/tree/master/vendor/choosealicense.com/_licenses) license, `key` is the lowercase basename of the license it modifies (e.g. `mit` or `apache-2.0`). Otherwise, `key` is the uppercase abbreviation of the license, which should include the version number if available.
+* `NOTE` is an uppercase note to differentiate a modified license, in case the jurisdiction prefix is insufficient.
+
+The first lines of the file should be YAML Front Matter, for example:
+
+```
+---
+title: MIT License
+spdx-id: MIT
+
+using:
+  - https://raw.githubusercontent.com/fgpv-vpgf/gulp-i18n-csv/master/license
+
+notes: Adds a translation of mit.txt
+
+---
+```
+
+If the license modifies a choosealicense.com license, use the same `title` and `spdx-id` and write brief `notes` describing the modification. If the license is listed in the [SPDX License List](https://spdx.org/licenses/), use its SPDX title and identifier. Otherwise, choose a title and identifier. Include at least one URL of a repository using the license under `using`; as more governments adopt standard licenses, this data can be used to remove obsolete licenses from this project. After the YAML Front Matter, if the license is listed in the SPDX License List, use its SPDX license text. Otherwise, use the text you have, replacing copyright years with `year`, copyright holders with `[fullname]`, and project names with `[project]`.
+
+Then, list the repositories with unrecognized licenses as a comma-separated list:
+
+    bundle exec rake licenses:none CSV=true
+
+And run the `licenses:github` task to recognize additional licenses thanks to your changes. Repeat this section until all licenses are recognized.
 
 Copyright (c) 2017 James McKinney, released under the MIT license

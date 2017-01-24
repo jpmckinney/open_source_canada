@@ -98,8 +98,13 @@ namespace :licenses do
               body = text
             end
           when '.md'
-            # Remove Jekyll Front Matter.
+            # Remove YAML Front Matter.
+            # https://github.com/RAMP-PCAR/ramp-pcar-docs/blob/master/license-en.md
             body = body.gsub(/\A---\n.+\n---\n/m, '')
+          when '.txt'
+            # Remove license terms of additional libraries.
+            # https://github.com/infra-geo-ouverte/igo2/blob/master/LICENCE.txt
+            body = body.gsub(/\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n.+/m, '')
           end
 
           matched_file = Licensee::Project::LicenseFile.new(body, File.basename(contents.download_url))
@@ -113,7 +118,7 @@ namespace :licenses do
             Licensee.instance_variable_set('@inverse', (1 - 90 / 100.0).round(2))
 
             matcher = Licensee::Matchers::Dice.new(matched_file)
-            matches = matcher.licenses_by_similiarity.select{|_, similarity| similarity >= 80}
+            matches = matcher.licenses_by_similiarity.select{|_, similarity| similarity >= 70}
 
             unless matches.empty?
               licenses[repo.full_name].merge!({
@@ -165,11 +170,13 @@ namespace :licenses do
   def print_repository_urls(matcher, formatter)
     matches = []
 
+    owners = ENV['ORGS'] && ENV['ORG'].split(',')
+
     File.open(LICENSES_FILENAME) do |f|
       YAML.load(f).each do |full_name, license|
         if matcher.call(license)
           owner, _ = full_name.split('/', 2)
-          if ENV['ORG'].nil? || ENV['ORG'] == owner
+          if owners.nil? || owners.include?(owner)
             matches << [full_name, license]
           end
         end
@@ -187,12 +194,18 @@ namespace :licenses do
 
   desc 'Prints URLs for repositories without licenses, according to GitHub'
   task :none do
-    print_repository_urls(->(license) { license.nil? }, ->(full_name, license) { "https://github.com/#{full_name}" })
+    print_repository_urls(
+      ->(license) { license.nil? },
+      ->(full_name, license) { "https://github.com/#{full_name}" }
+    )
   end
 
   desc 'Prints URLs for repositories with unknown licenses, according to GitHub'
   task :unknown do
-    print_repository_urls(->(license) { license && license['id'].nil? }, ->(full_name, license) { license['url'] })
+    print_repository_urls(
+      ->(license) { license && license['id'].nil? }, 
+      ->(full_name, license) { license['url'] }
+    )
   end
 end
 
