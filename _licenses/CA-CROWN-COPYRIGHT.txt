@@ -1,0 +1,24 @@
+---
+title: Crown Copyright, Government of Canada
+spdx-id: Crown-Copyright-CA
+
+using:
+  - https://github.com/GeoCanViz/GeoCanViz/blob/master/License.txt
+
+---
+
+[project] - Terms and Conditions of Use
+
+Unless otherwise noted, computer program source code of [project] is 
+covered under Crown Copyright, Government of Canada.
+
+Copyright (c) [year] Government of Canada
+
+
+
+[project] - Conditions régissant l'utilisation
+
+Sauf indication contraire, le code source de [project]
+est protégé par le droit d'auteur de la Couronne du gouvernement du Canada.
+
+(c) Droit d'auteur – Gouvernement du Canada, [year]

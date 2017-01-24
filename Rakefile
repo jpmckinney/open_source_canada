@@ -8,7 +8,10 @@ require 'yaml'
 require 'faraday-http-cache'
 require 'git'
 require 'licensee'
+require 'nokogiri'
 require 'octokit'
+
+LICENSES_FILENAME = 'licenses.yml'
 
 Octokit.auto_paginate = true
 
@@ -20,53 +23,108 @@ Octokit.middleware = Faraday::RackBuilder.new do |builder|
   builder.adapter Faraday.default_adapter
 end
 
+# Override `Licensee::License.license_dir` in order to customize the licenses.
+# `_licenses` is based on https://github.com/github/choosealicense.com/tree/gh-pages/_licenses
+class Licensee::License
+  class << self
+    def license_dir
+      dir = File.dirname(__FILE__)
+      File.expand_path '_licenses', dir
+    end
+  end
+end
+
 namespace :licenses do
   desc "Write a licenses.yml file with each repository's license, according to GitHub"
   task :github do
     client = Octokit::Client.new(access_token: ENV['ACCESS_TOKEN'])
     headers = {accept: 'application/vnd.github.drax-preview+json'}
 
-    licenses_filename = 'licenses.yml'
     licenses = {}
 
-    if File.exist?(licenses_filename)
-      licenses = YAML.load(File.read(licenses_filename))
+    # Load existing licenses.
+    if File.exist?(LICENSES_FILENAME)
+      licenses = YAML.load(File.read(LICENSES_FILENAME))
     end
 
-    if ENV['ORGS']
-      organization_names = ENV['ORGS'].split(',')
-    else
-      organization_names = Set.new
-
-      Faraday.get('https://raw.githubusercontent.com/canada-ca/welcome/master/Organizations-Organisations.md').body.scan(/\(([a-z]+:[^)]+)\)/).sort.each do |url|
-        parsed = URI.parse(url[0])
-        if parsed.host['github.com']
-          organization_names << parsed.path.chomp('/').match(%r{/(\S+)})[1].downcase
-        end
-      end
-
-      organization_names += YAML.load(Faraday.get('https://raw.githubusercontent.com/github/government.github.com/gh-pages/_data/governments.yml').body)['Canada'].map(&:downcase)
-    end
-
+    # Get the repositories to process.
     if ENV['REPOS']
-      repositories = ENV['REPOS'].split(',').map do |owner_repo|
-        client.repo(owner_repo, headers)
+      repositories = ENV['REPOS'].split(',').map do |full_name|
+        client.repo(full_name, headers.dup)
       end
     else
-      repositories = organization_names.flat_map do |organization_name|
-        client.repos(organization_name, headers.merge(type: 'sources'))
+      # Get the organizations to process.
+      if ENV['ORGS']
+        organization_names = ENV['ORGS'].split(',')
+      else
+        organization_names = Set.new
+
+        Faraday.get('https://raw.githubusercontent.com/canada-ca/welcome/master/Organizations-Organisations.md').body.scan(/\(([a-z]+:[^)]+)\)/).each do |url|
+          parsed = URI.parse(url[0])
+          if parsed.host['github.com']
+            organization_names << parsed.path.chomp('/')[1..-1].downcase
+          end
+        end
+
+        organization_names += YAML.load(Faraday.get('https://raw.githubusercontent.com/github/government.github.com/gh-pages/_data/governments.yml').body)['Canada'].map(&:downcase)
+      end
+
+      repositories = organization_names.to_a.sort.flat_map do |organization_name|
+        client.org_repos(organization_name, headers.merge(type: 'sources'))
       end
     end
 
     repositories.each do |repo|
-      licenses[repo.full_name] = nil
+      print '.'
+
+      licenses[repo.full_name] ||= nil
 
       if repo.license
+        contents = client.repository_license_contents(repo.full_name, headers.dup)
+
         licenses[repo.full_name] = {
           'id' => repo.license.spdx_id,
-          'key' => repo.license.key,
-          'url' => client.repository_license_contents(repo.full_name, headers).html_url,
+          'url' => contents.html_url,
         }
+
+        if repo.license.key == 'other'
+          body = Faraday.get(contents.download_url).body
+
+          case File.extname(contents.download_url)
+          when '.html'
+            # Remove non-content HTML.
+            text = Nokogiri::HTML(body).xpath('//main').text
+            unless text.empty?
+              body = text
+            end
+          when '.md'
+            # Remove Jekyll Front Matter.
+            body = body.gsub(/\A---\n.+\n---\n/m, '')
+          end
+
+          matched_file = Licensee::Project::LicenseFile.new(body, File.basename(contents.download_url))
+
+          if matched_file.license
+            licenses[repo.full_name]['id'] = matched_file.license.meta['spdx-id']
+          else
+            # CA-CROWN-COPYRIGHT.txt's `max_delta`, which is based on `inverse_confidence_threshold`,
+            # is too small to match due to the file's small size.
+
+            Licensee.instance_variable_set('@inverse', (1 - 90 / 100.0).round(2))
+
+            matcher = Licensee::Matchers::Dice.new(matched_file)
+            matches = matcher.licenses_by_similiarity.select{|_, similarity| similarity >= 80}
+
+            unless matches.empty?
+              licenses[repo.full_name].merge!({
+                'id' => matches[0][0].meta['spdx-id'],
+                'confidence' => matches[0][1],
+              })
+            end
+
+            Licensee.instance_variable_set('@inverse', (1 - 95 / 100.0).round(2))
+          end
+        end
       elsif !Git.ls_remote(repo.html_url).empty?
         Dir.mktmpdir do |dir|
           # @see https://github.com/benbalter/licensee/blob/master/bin/licensee
@@ -99,44 +157,42 @@ namespace :licenses do
       end
     end
 
-    File.open(licenses_filename, 'w') do |f|
+    File.open(LICENSES_FILENAME, 'w') do |f|
       f.write(YAML.dump(licenses))
     end
   end
 
-  desc 'Prints URLs for repositories without licenses, according to GitHub'
-  task :none do
-    owner_repos = []
+  def print_repository_urls(matcher, formatter)
+    matches = []
 
-    File.open('licenses.yml') do |f|
-      YAML.load(f).each do |owner_repo,license|
-        if license.nil?
-          owner, _ = owner_repo.split('/', 2)
+    File.open(LICENSES_FILENAME) do |f|
+      YAML.load(f).each do |full_name, license|
+        if matcher.call(license)
+          owner, _ = full_name.split('/', 2)
           if ENV['ORG'].nil? || ENV['ORG'] == owner
-            owner_repos << owner_repo
+            matches << [full_name, license]
           end
         end
       end
     end
 
     if ENV['CSV']
-      puts owner_repos.join(',')
+      puts matches.map(&:first).join(',')
     else
-      owner_repos.each do |owner_repo|
-        puts "https://github.com/#{owner_repo}"
+      matches.each do |full_name, license|
+        puts formatter.call(full_name, license)
       end
     end
   end
 
+  desc 'Prints URLs for repositories without licenses, according to GitHub'
+  task :none do
+    print_repository_urls(->(license) { license.nil? }, ->(full_name, license) { "https://github.com/#{full_name}" })
+  end
+
   desc 'Prints URLs for repositories with unknown licenses, according to GitHub'
   task :unknown do
-    File.open('licenses.yml') do |f|
-      YAML.load(f).each do |owner_repo,license|
-        if license && license['id'].nil?
-          puts "https://github.com/#{owner_repo}"
-        end
-      end
-    end
+    print_repository_urls(->(license) { license && license['id'].nil? }, ->(full_name, license) { license['url'] })
   end
 end
 
@@ -149,15 +205,15 @@ namespace :repos do
 
     messages = []
 
-    ENV['REPOS'].split(',').each do |owner_repo|
+    ENV['REPOS'].split(',').each do |full_name|
       print '.'
 
-      repo = client.repo(owner_repo)
+      repo = client.repo(full_name)
 
       begin
         commit = repo.rels[:commits].get.data[0].commit
         tree_sha = commit.tree.sha
-        tree = client.tree(owner_repo, tree_sha).tree
+        tree = client.tree(full_name, tree_sha).tree
         path = tree[0].path
 
         if tree.one? && path == 'README.md'
@@ -167,24 +223,24 @@ namespace :repos do
             if date.to_i < date_threshold
               branches = repo.rels[:branches].get.data.map(&:name)
               if branches.one?
-                messages << [owner_repo, :stub_repository, "has a single branch (#{branches[0]}) with a single file (#{path}) of #{size} bytes updated on #{date.strftime('%b %e, %Y')}"]
+                messages << [full_name, :stub_repository, "has a single branch (#{branches[0]}) with a single file (#{path}) of #{size} bytes updated on #{date.strftime('%b %e, %Y')}"]
               else
-                messages << [owner_repo, :multiple_branches, branches.join(', ')]
+                messages << [full_name, :multiple_branches, branches.join(', ')]
               end
             else
-              messages << [owner_repo, :recent_commit_date, "#{path} #{date.strftime('%b %e, %Y')}"]
+              messages << [full_name, :recent_commit_date, "#{path} #{date.strftime('%b %e, %Y')}"]
             end
           else
-            messages << [owner_repo, :large_file_size, "#{path} #{size} bytes"]
+            messages << [full_name, :large_file_size, "#{path} #{size} bytes"]
           end
         else
-          messages << [owner_repo, :multiple_files, tree.map(&:path).join(', ')]
+          messages << [full_name, :multiple_files, tree.map(&:path).join(', ')]
         end
       rescue Octokit::Conflict => e
         if e.message['409 - Git Repository is empty.']
-          messages << [owner_repo, :empty_repository, "is empty and was updated on #{repo.updated_at.strftime('%b %e, %Y')}"]
+          messages << [full_name, :empty_repository, "is empty and was updated on #{repo.updated_at.strftime('%b %e, %Y')}"]
         else
-          messages << [owner_repo, :http_error, e]
+          messages << [full_name, :http_error, e]
         end
       end
     end
@@ -207,8 +263,8 @@ namespace :repos do
     puts
     messages.sort_by{|_, key, _| order.index(key)}.group_by{|_, key, _| key}.each do |key, group|
       puts "#{key} (#{group.size})"
-      group.sort.each do |owner_repo, _, message|
-        puts "* [ ] https://github.com/#{owner_repo} #{message}"
+      group.sort.each do |full_name, _, message|
+        puts "* [ ] https://github.com/#{full_name} #{message}"
       end
       puts
     end
@@ -218,13 +274,13 @@ namespace :repos do
   task :fork_and_clone do
     client = Octokit::Client.new(access_token: ENV['ACCESS_TOKEN'])
 
-    ENV['REPOS'].split(',').each do |owner_repo|
-      _, repo = owner_repo.split('/', 2)
+    ENV['REPOS'].split(',').each do |full_name|
+      _, repo = full_name.split('/', 2)
       url = "https://github.com/#{client.user.login}/#{repo}"
 
       unless Faraday.head(url).success?
         begin
-          client.fork(owner_repo)
+          client.fork(full_name)
         rescue Octokit::Forbidden => e
           $stderr.puts e.message
           next
@@ -255,13 +311,13 @@ namespace :repos do
     message = 'Add license files'
     login = client.user.login
 
-    ENV['REPOS'].split(',').each do |owner_repo|
-      _, repo = owner_repo.split('/', 2)
+    ENV['REPOS'].split(',').each do |full_name|
+      _, repo = full_name.split('/', 2)
       if File.exist?(repo)
         Dir.chdir(repo) do
           git = Git.open(Dir.pwd)
           origin = client.repo("#{login}:#{repo}")
-          upstream = client.repo(owner_repo)
+          upstream = client.repo(full_name)
 
           if File.exist?('License-en.txt') || File.exist?('Licence-fr.txt')
             abort "#{repo}: A license named 'License-en.txt' and/or 'Licence-fr.txt' already exists."
@@ -288,7 +344,7 @@ namespace :repos do
           git.commit(message)
           git.push('origin', branch)
 
-          client.create_pull_request(owner_repo, repo.default_branch, "#{login}:#{branch}", message)
+          client.create_pull_request(full_name, repo.default_branch, "#{login}:#{branch}", message)
         end
       end
     end

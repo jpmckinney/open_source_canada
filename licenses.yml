@@ -3,7 +3,7 @@ AAFC-MBB/acceptor:
   id: MIT
   url: https://github.com/AAFC-MBB/acceptor/blob/master/LICENSE
 AAFC-MBB/android-mock-ws:
-  id: 
+  id: Apache-2.0
   url: https://github.com/AAFC-MBB/android-mock-ws/blob/master/LICENSE
 AAFC-MBB/android-real-ws:
   id: MIT
@@ -68,7 +68,7 @@ AAFC-MBB/LicenseFixer:
   id: MIT
   url: https://github.com/AAFC-MBB/LicenseFixer/blob/master/LICENSE
 AAFC-MBB/matiri:
-  id: 
+  id: Apache-2.0
   url: https://github.com/AAFC-MBB/matiri/blob/master/LICENSE
 AAFC-MBB/MBB-Bio-Roll:
   id: MIT
@@ -129,11 +129,13 @@ ECCC-MSC/MetOceanOWS:
   id: GPL-3.0
   url: https://github.com/ECCC-MSC/MetOceanOWS/blob/master/LICENSE
 GeoCanViz/GeoCanAut:
-  id: 
+  id: Crown-Copyright-CA
   url: https://github.com/GeoCanViz/GeoCanAut/blob/master/License.txt
+  confidence: 85.0
 GeoCanViz/GeoCanViz:
-  id: 
+  id: Crown-Copyright-CA
   url: https://github.com/GeoCanViz/GeoCanViz/blob/master/License.txt
+  confidence: 83.9506172839506
 MC-MBO-WebPublishingTeam/ASP-presentation: 
 MC-MBO-WebPublishingTeam/DW-Extension-HTMLinter: 
 MC-MBO-WebPublishingTeam/DW-Extension-IC-Styling: 
@@ -141,11 +143,13 @@ MC-MBO-WebPublishingTeam/DW-Extension-MC-TOC:
 RAMP-PCAR/RAMP-PCAR: 
 RAMP-PCAR/ramp-pcar-dist: 
 RAMP-PCAR/ramp-pcar-docs:
-  id: 
+  id: MIT
   url: https://github.com/RAMP-PCAR/ramp-pcar-docs/blob/master/license-en.md
+  confidence: 96.39344262295081
 RAMP-PCAR/RAMP-PCAR.github.io:
-  id: 
+  id: MIT
   url: https://github.com/RAMP-PCAR/RAMP-PCAR.github.io/blob/master/license-en.html
+  confidence: 95.73770491803279
 RAMP-PCAR/ramp-scripts: 
 RAMP-PCAR/ramp-theme-canada: 
 RAMP-PCAR/ramp-theme-dist: 
@@ -164,7 +168,7 @@ ServiceCanada/gc-departments:
   confidence: 90
 ServiceCanada/menu-changes: 
 ServiceCanada/wet-boew-wb-disable:
-  id: 
+  id: MIT
   url: https://github.com/ServiceCanada/wet-boew-wb-disable/blob/gh-pages/License-en.html
 TBS-EACPD/PSES: 
 TBS-EACPD/spiders: 
@@ -190,14 +194,14 @@ open-data/ckan-datatools:
 open-data/ckan-virtual-library-import: 
 open-data/ckanext-autodoc: 
 open-data/ckanext-canada:
-  id: 
+  id: MIT
   url: https://github.com/open-data/ckanext-canada/blob/master/COPYING
 open-data/ckanext-canada-ckan-1.8:
-  id: 
+  id: MIT
   url: https://github.com/open-data/ckanext-canada-ckan-1.8/blob/master/COPYING
 open-data/ckanext-cloudstorage: 
 open-data/ckanext-drupal:
-  id: 
+  id: MIT
   url: https://github.com/open-data/ckanext-drupal/blob/master/COPYING
 open-data/ckanext-extendedactivity: 
 open-data/ckanext-fgp:
@@ -271,10 +275,10 @@ pspc-spac/pwgsc-drupal:
   id: 
   url: https://github.com/pspc-spac/pwgsc-drupal/blob/master/LICENSE.txt
 tbs-sct/GCcollab:
-  id: 
+  id: GPL-2.0
   url: https://github.com/tbs-sct/GCcollab/blob/gccollab/LICENSE.txt
 tbs-sct/gcconnex:
-  id: 
+  id: GPL-2.0
   url: https://github.com/tbs-sct/gcconnex/blob/gcconnex/LICENSE.txt
 tbs-sct/gcconnex-humhub: 
 tbs-sct/gcpedia:
@@ -284,14 +288,14 @@ tbs-sct/tbs-sct.github.io:
 wet-boew/codefest: 
 wet-boew/codefest-transcripts: 
 wet-boew/GCWeb:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/GCWeb/blob/master/License-en.txt
 wet-boew/gcweb-experimental:
   id: MIT
   url: https://github.com/wet-boew/gcweb-experimental/blob/master/package.json
   confidence: 90
 wet-boew/generator-wet-boew-theme:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/generator-wet-boew-theme/blob/master/License-en.txt
 wet-boew/grunt-cssmin-ie8-clean:
   id: MIT
@@ -322,48 +326,48 @@ wet-boew/spring-boot-thymeleaf:
   url: https://github.com/wet-boew/spring-boot-thymeleaf/blob/master/LICENSE
 wet-boew/techspecs: 
 wet-boew/theme-base:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/theme-base/blob/master/License-en.txt
 wet-boew/theme-gc-intranet:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/theme-gc-intranet/blob/master/License-en.txt
 wet-boew/theme-gcweb: 
 wet-boew/theme-gcwu-fegc:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/theme-gcwu-fegc/blob/master/License-en.txt
 wet-boew/theme-ogpl:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/theme-ogpl/blob/master/License-en.txt
 wet-boew/themes-cdn: 
 wet-boew/themes-dist: 
 wet-boew/web-reporting: 
 wet-boew/wet-boew:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/wet-boew/blob/master/License-en.txt
 wet-boew/wet-boew-aem: 
 wet-boew/wet-boew-api: 
 wet-boew/wet-boew-api-standards: 
 wet-boew/wet-boew-attachments:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/wet-boew-attachments/blob/master/License-en.txt
 wet-boew/wet-boew-cdn: 
 wet-boew/wet-boew-ckeditor: 
 wet-boew/wet-boew-codecharge: 
 wet-boew/wet-boew-dist:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/wet-boew-dist/blob/v4.0-dist/License-en.txt
 wet-boew/wet-boew-dist-legacy: 
 wet-boew/wet-boew-docpad: 
 wet-boew/wet-boew-documentation: 
 wet-boew/wet-boew-dotnet:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/wet-boew-dotnet/blob/master/License-en.txt
 wet-boew/wet-boew-dotnetnuke: 
 wet-boew/wet-boew-drupal: 
 wet-boew/wet-boew-drupal8: 
 wet-boew/wet-boew-elgg: 
 wet-boew/wet-boew-epub:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/wet-boew-epub/blob/master/License-en.txt
 wet-boew/wet-boew-experimental: 
 wet-boew/wet-boew-hugo:
@@ -374,7 +378,7 @@ wet-boew/wet-boew-java-maven:
   url: https://github.com/wet-boew/wet-boew-java-maven/blob/master/package.json
   confidence: 90
 wet-boew/wet-boew-jekyll:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/wet-boew-jekyll/blob/master/License-en.txt
 wet-boew/wet-boew-joomla: 
 wet-boew/wet-boew-legacy: 
@@ -395,13 +399,13 @@ wet-boew/wet-boew-styleguide:
   url: https://github.com/wet-boew/wet-boew-styleguide/blob/master/package.json
   confidence: 90
 wet-boew/wet-boew-wordpress:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/wet-boew-wordpress/blob/master/License-en.txt
 wet-boew/wet-boew-wpss:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/wet-boew-wpss/blob/master/License-en.txt
 wet-boew/wet-boew-xsl:
-  id: 
+  id: MIT
   url: https://github.com/wet-boew/wet-boew-xsl/blob/master/License-eng.txt
 wet-boew/wet-boew.github.io: 
 wet-boew/wiwg_api_current-infrastructure: 
@@ -426,7 +430,7 @@ BCDevExchange/BCDevExchange-app:
   id: Apache-2.0
   url: https://github.com/BCDevExchange/BCDevExchange-app/blob/master/LICENSE
 BCDevExchange/Our-Project-Docs:
-  id: 
+  id: CC-BY-4.0
   url: https://github.com/BCDevExchange/Our-Project-Docs/blob/master/LICENSE.md
 BCDevExchange/ckanext-wso2-harvester:
   id: Apache-2.0
@@ -436,10 +440,10 @@ BCDevExchange/BCDevExchange-Resources:
   id: Apache-2.0
   url: https://github.com/BCDevExchange/BCDevExchange-Resources/blob/master/LICENSE
 BCDevExchange/BCDevExchange-Projects:
-  id: 
+  id: CC-BY-4.0
   url: https://github.com/BCDevExchange/BCDevExchange-Projects/blob/master/LICENSE
 BCDevExchange/Guides-Templates-Etc:
-  id: 
+  id: CC-BY-4.0
   url: https://github.com/BCDevExchange/Guides-Templates-Etc/blob/master/LICENSE
 BCDevExchange/BCDevExchange-Programs:
   id: 
@@ -448,7 +452,7 @@ BCDevExchange/garbage-day:
   id: 
   url: https://github.com/BCDevExchange/garbage-day/blob/master/LICENSE
 BCDevExchange/RA-Documents:
-  id: 
+  id: CC-BY-4.0
   url: https://github.com/BCDevExchange/RA-Documents/blob/master/LICENSE
 BCDevExchange/cemetery-information:
   id: 
@@ -460,7 +464,7 @@ BCDevExchange/bc-property-api-specification:
   id: 
   url: https://github.com/BCDevExchange/bc-property-api-specification/blob/master/LICENSE
 BCDevExchange/rapid-adoption:
-  id: 
+  id: CC-BY-4.0
   url: https://github.com/BCDevExchange/rapid-adoption/blob/master/LICENSE
 BCDevExchange/bca-api:
   id: Apache-2.0
@@ -498,7 +502,7 @@ bcgov/wqbc:
   id: Apache-2.0
   url: https://github.com/bcgov/wqbc/blob/master/LICENSE
 bcgov/BC-Policy-Framework-For-GitHub:
-  id: 
+  id: CC-BY-4.0
   url: https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/LICENSE
 bcgov/bcgroundwater:
   id: Apache-2.0
@@ -507,7 +511,7 @@ bcgov/groundwater-levels:
   id: Apache-2.0
   url: https://github.com/bcgov/groundwater-levels/blob/master/LICENSE
 bcgov/EnvReportBC:
-  id: 
+  id: CC-BY-4.0
   url: https://github.com/bcgov/EnvReportBC/blob/master/LICENSE
 bcgov/envreportutils:
   id: Apache-2.0
@@ -540,13 +544,13 @@ bcgov/citizen-engagement-web-toolkit:
   id: 
   url: https://github.com/bcgov/citizen-engagement-web-toolkit/blob/master/LICENSE
 bcgov/OCIO-integrated-planning:
-  id: 
+  id: CC-BY-4.0
   url: https://github.com/bcgov/OCIO-integrated-planning/blob/master/License
 bcgov/esm-server:
   id: Apache-2.0
   url: https://github.com/bcgov/esm-server/blob/develop/LICENSE
 bcgov/OCIO-service-development:
-  id: 
+  id: CC-BY-4.0
   url: https://github.com/bcgov/OCIO-service-development/blob/master/LICENSE
 bcgov/ltema:
   id: Apache-2.0
@@ -599,7 +603,7 @@ bcgov/REST-API-Development-Guide:
   id: 
   url: https://github.com/bcgov/REST-API-Development-Guide/blob/18f-pages/LICENSE.md
 bcgov/data-driven-decision-making:
-  id: 
+  id: CC-BY-4.0
   url: https://github.com/bcgov/data-driven-decision-making/blob/master/LICENSE.md
 bcgov/guide-of-guides:
   id: 
@@ -623,7 +627,7 @@ bcgov/issue-aggregator:
   id: Apache-2.0
   url: https://github.com/bcgov/issue-aggregator/blob/master/LICENSE
 bcgov/api-specs:
-  id: 
+  id: CC-BY-4.0
   url: https://github.com/bcgov/api-specs/blob/master/LICENSE.md
 bcgov/DevEx-Roadmap:
   id: 
@@ -774,7 +778,7 @@ cityofgreatersudbury/its4mobility:
   url: https://github.com/cityofgreatersudbury/its4mobility/blob/master/LICENSE
 CityofOttawa/Apps4Ottawa-Website: 
 CityofOttawa/Ottawa-ckan:
-  id: 
+  id: MIT
   url: https://github.com/CityofOttawa/Ottawa-ckan/blob/master/COPYING
 CityofOttawa/feeds_translation: 
 CityofOttawa/Popup_Survey: 
