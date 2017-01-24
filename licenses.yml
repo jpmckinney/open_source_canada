@@ -845,23 +845,26 @@ electionsquebec/PolygooMap:
   id: Unlicense
   url: https://github.com/electionsquebec/PolygooMap/blob/master/LICENSE
 fgpv-vpgf/fgpv-vpgf:
-  id: 
+  id: MIT
   url: https://github.com/fgpv-vpgf/fgpv-vpgf/blob/master/LICENSE
+  confidence: 90.64976228209191
 fgpv-vpgf/fgpv-vpgf.github.io: 
 fgpv-vpgf/fgpv-vpgf-dist: 
 fgpv-vpgf/gulp-i18n-csv:
-  id: 
+  id: MIT
   url: https://github.com/fgpv-vpgf/gulp-i18n-csv/blob/master/license
 fgpv-vpgf/r2v-config-generator:
-  id: 
+  id: MIT
   url: https://github.com/fgpv-vpgf/r2v-config-generator/blob/master/LICENSE
+  confidence: 90.64976228209191
 fgpv-vpgf/rcs: 
 fgpv-vpgf/doc-site-sample:
   id: Apache-2.0
   url: https://github.com/fgpv-vpgf/doc-site-sample/blob/master/LICENSE
 fgpv-vpgf/geoApi:
-  id: 
+  id: MIT
   url: https://github.com/fgpv-vpgf/geoApi/blob/master/LICENSE
+  confidence: 90.64976228209191
 fgpv-vpgf/PAGER:
   id: MIT
   url: https://github.com/fgpv-vpgf/PAGER/blob/master/LICENSE
