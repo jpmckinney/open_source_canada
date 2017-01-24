@@ -5,7 +5,7 @@ spdx-id: MIT
 using:
   - https://github.com/open-data/ckanext-canada/blob/master/COPYING
 
-notes: Adds a preamble to mit.txt
+notes: Adds a preamble and trademark notice to mit.txt
 
 ---
 
