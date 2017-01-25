@@ -3,7 +3,7 @@ title: MIT License
 spdx-id: MIT
 
 using:
-  - https://github.com/wet-boew/wet-boew-wpss/blob/master/License-en.txt
+  - https://github.com/GNWT/consistent-user-experience/blob/master/LICENSE
 
 notes: Adds a preamble to mit.txt
 
@@ -12,8 +12,13 @@ notes: Adds a preamble to mit.txt
 [project] - Terms and Conditions of Use
 
 Unless otherwise noted, computer program source code of the [project] is
-covered under Crown Copyright, Government of Canada, and is distributed under
-the MIT License.
+covered under Crown Copyright, Government of the Northwest Territories, and is
+distributed under the MIT License.
+
+The Northwest Territories logo and related graphics associated with this
+distribution are protected under trademark law and copyright law. No
+permission is granted to use them outside the parameters of the Government of
+the Northwest Territories's corporate identity program.
 
 Copyright title to all 3rd party software distributed with the [project] is
 held by the respective copyright holders as noted in those files. Users are
@@ -22,7 +27,7 @@ asked to read the 3rd Party Licenses referenced with those assets.
 
 MIT License
 
-Copyright (c) [year] Government of Canada
+Copyright (c) [year] Government of the Northwest Territories
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

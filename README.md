@@ -80,7 +80,9 @@ notes: Adds a translation of mit.txt
 ---
 ```
 
-If the license modifies a choosealicense.com license, use the same `title` and `spdx-id` and write brief `notes` describing the modification. If the license is listed in the [SPDX License List](https://spdx.org/licenses/), use its SPDX title and identifier. Otherwise, choose a title and identifier. Include at least one URL of a repository using the license under `using`; as more governments adopt standard licenses, this data can be used to remove obsolete licenses from this project. After the YAML Front Matter, if the license is listed in the SPDX License List, use its SPDX license text. Otherwise, use the text you have, replacing copyright years with `year`, copyright holders with `[fullname]`, and project names with `[project]`.
+* If the license modifies a choosealicense.com license, use the same `title` and `spdx-id` and write brief `notes` describing the modification. If the license is listed in the [SPDX License List](https://spdx.org/licenses/), use the license's full name and identifier from SPDX. Otherwise, choose a title and identifier.
+* List at least one URL to a repository using the license under `using`; as more governments adopt standard licenses, this data can be used to remove obsolete licenses from this project.
+* After the YAML Front Matter, if the license is listed in the SPDX License List, use its SPDX license text. Otherwise, use the text you have, replacing copyright years with `[year]`, copyright holders with `[fullname]`, and project names with `[project]`.
 
 Then, list the repositories with unrecognized licenses as a comma-separated list:
 

@@ -12,6 +12,8 @@ require 'nokogiri'
 require 'octokit'
 
 LICENSES_FILENAME = 'licenses.yml'
+CONFIDENCE_THRESHOLD = Licensee::CONFIDENCE_THRESHOLD
+CONFIDENCE_THRESHOLD_LOW = 70
 
 Octokit.auto_paginate = true
 
@@ -115,10 +117,10 @@ namespace :licenses do
             # CA-CROWN-COPYRIGHT.txt's `max_delta`, which is based on `inverse_confidence_threshold`,
             # is too small to match due to the file's small size.
 
-            Licensee.instance_variable_set('@inverse', (1 - 90 / 100.0).round(2))
+            Licensee.instance_variable_set('@inverse', (1 - CONFIDENCE_THRESHOLD_LOW / 100.0).round(2))
 
             matcher = Licensee::Matchers::Dice.new(matched_file)
-            matches = matcher.licenses_by_similiarity.select{|_, similarity| similarity >= 70}
+            matches = matcher.licenses_by_similiarity.select{|_, similarity| similarity >= CONFIDENCE_THRESHOLD_LOW}
 
             unless matches.empty?
               licenses[repo.full_name].merge!({
@@ -127,7 +129,7 @@ namespace :licenses do
               })
             end
 
-            Licensee.instance_variable_set('@inverse', (1 - 95 / 100.0).round(2))
+            Licensee.instance_variable_set('@inverse', (1 - CONFIDENCE_THRESHOLD / 100.0).round(2))
           end
         end
       elsif !Git.ls_remote(repo.html_url).empty?
@@ -170,7 +172,7 @@ namespace :licenses do
   def print_repository_urls(matcher, formatter)
     matches = []
 
-    owners = ENV['ORGS'] && ENV['ORG'].split(',')
+    owners = ENV['ORGS'] && ENV['ORGS'].split(',')
 
     File.open(LICENSES_FILENAME) do |f|
       YAML.load(f).each do |full_name, license|

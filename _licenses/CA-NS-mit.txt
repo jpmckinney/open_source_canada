@@ -3,26 +3,23 @@ title: MIT License
 spdx-id: MIT
 
 using:
-  - https://github.com/wet-boew/wet-boew-wpss/blob/master/License-en.txt
+  - https://github.com/nsgov/Saltire-Theme-Drupal7/blob/master/LICENSE.txt
 
 notes: Adds a preamble to mit.txt
 
 ---
 
-[project] - Terms and Conditions of Use
+[project] is Copyright [year] Province of Nova Scotia and distributed under MIT
+License
 
-Unless otherwise noted, computer program source code of the [project] is
-covered under Crown Copyright, Government of Canada, and is distributed under
-the MIT License.
-
-Copyright title to all 3rd party software distributed with the [project] is
-held by the respective copyright holders as noted in those files. Users are
-asked to read the 3rd Party Licenses referenced with those assets.
-
+The Nova Scotia logo and graphical elements of this theme are protected by
+trademark and copyright  laws. They must be used in accordance with the
+Province of Nova Scotia's Visual Identity Program. Learn more at
+http://novascotia.ca/cns/ .
 
 MIT License
 
-Copyright (c) [year] Government of Canada
+Copyright (c) [year] Government of Nova Scotia
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
