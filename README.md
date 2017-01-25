@@ -14,6 +14,10 @@ Collect the licenses under which repositories are released on GitHub:
 
     bundle exec rake licenses:github
 
+Collect the licenses for only the repositories that were created since the last run:
+
+    bundle exec rake licenses:github ONLYNEW=true
+
 ### Add licenses to repositories without licenses
 
 This section describes tools to submit pull requests to add licenses to repositories that don't have any.

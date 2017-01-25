@@ -76,6 +76,10 @@ namespace :licenses do
       end
     end
 
+    if ENV['ONLYNEW']
+      repositories.reject!{|repo| licenses.key?(repo.full_name)}
+    end
+
     repositories.each do |repo|
       print '.'
 

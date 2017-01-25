@@ -418,8 +418,14 @@ abgov/ab-compensation-transparency-toolkit:
 abgov/ckanext-ab_scheming:
   id: AGPL-3.0
   url: https://github.com/abgov/ckanext-ab_scheming/blob/master/LICENSE
-abgov/ckanext-open_alberta: 
-abgov/ckanext-geomapviewer: 
+abgov/ckanext-open_alberta:
+  id: AGPL-3.0
+  url: https://github.com/abgov/ckanext-open_alberta/blob/master/LICENSE
+  confidence: 100
+abgov/ckanext-geomapviewer:
+  id: AGPL-3.0
+  url: https://github.com/abgov/ckanext-geomapviewer/blob/master/LICENSE
+  confidence: 100
 abgov/ckanext-classification:
   id: AGPL-3.0
   url: https://github.com/abgov/ckanext-classification/blob/master/LICENSE
@@ -435,7 +441,10 @@ BCDevExchange/Our-Project-Docs:
 BCDevExchange/ckanext-wso2-harvester:
   id: Apache-2.0
   url: https://github.com/BCDevExchange/ckanext-wso2-harvester/blob/master/LICENSE
-BCDevExchange/API-Management: 
+BCDevExchange/API-Management:
+  id: Apache-2.0
+  url: https://github.com/BCDevExchange/API-Management/blob/master/LICENSE.md
+  confidence: 100
 BCDevExchange/BCDevExchange-Resources:
   id: Apache-2.0
   url: https://github.com/BCDevExchange/BCDevExchange-Resources/blob/master/LICENSE
@@ -558,7 +567,10 @@ bcgov/ltema:
 bcgov/bearmon:
   id: Apache-2.0
   url: https://github.com/bcgov/bearmon/blob/master/LICENSE
-bcgov/openconsult: 
+bcgov/openconsult:
+  id: AGPL-3.0
+  url: https://github.com/bcgov/openconsult/blob/master/README.md
+  confidence: 16.216216216216218
 bcgov/aspb-planning:
   id: CC0-1.0
   url: https://github.com/bcgov/aspb-planning/blob/master/LICENSE
@@ -689,7 +701,10 @@ bcgov/BCStats:
 bcgov/WES-engagement-states:
   id: Apache-2.0
   url: https://github.com/bcgov/WES-engagement-states/blob/master/LICENSE
-bcgov/simple-R-shiny: 
+bcgov/simple-R-shiny:
+  id: Apache-2.0
+  url: https://github.com/bcgov/simple-R-shiny/blob/master/LICENSE
+  confidence: 100
 bcgov/distance-calculator:
   id: Apache-2.0
   url: https://github.com/bcgov/distance-calculator/blob/master/LICENSE
