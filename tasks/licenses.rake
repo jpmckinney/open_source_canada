@@ -36,16 +36,7 @@ namespace :licenses do
       if ENV['ORGS']
         organization_names = ENV['ORGS'].split(',')
       else
-        organization_names = Set.new
-
-        Faraday.get('https://raw.githubusercontent.com/canada-ca/welcome/master/Organizations-Organisations.md').body.scan(/\(([a-z]+:[^)]+)\)/).each do |url|
-          parsed = URI.parse(url[0])
-          if parsed.host['github.com']
-            organization_names << parsed.path.chomp('/')[1..-1].downcase
-          end
-        end
-
-        organization_names += YAML.load(Faraday.get('https://raw.githubusercontent.com/github/government.github.com/gh-pages/_data/governments.yml').body)['Canada'].map(&:downcase)
+        organization_names = canadian_government_organizations
       end
 
       repositories = organization_names.to_a.sort.flat_map do |organization_name|
