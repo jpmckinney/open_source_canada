@@ -96,17 +96,17 @@ And run the `licenses:github` task to recognize additional licenses thanks to yo
 
 ### Add GitHub organizations to [@cdngovrepos](https://twitter.com/cdngovrepos)
 
-`cdngovrepos` is a Twitter bot that tweets every time any Canadian government opens a new repo on GitHub. It uses IFTTT. IFTTT applets can only be created manually. (I attempted to automate the process using the Web Console, but I couldn't trigger the selection of services or the configuring of the organization and message.)
+`cdngovrepos` is a Twitter bot that tweets every time any Canadian government opens a new repo on GitHub. It uses one IFTTT applet per GitHub organization to send the tweets. IFTTT applets can only be created manually. (I attempted to automate the process using the Web Console, but I couldn't trigger the selection of services or the configuring of the organization and message.)
 
-My process for adding new organizations to IFTTT is:
+My process for adding a new IFTTT applet is:
 
 #### Setup
 
 1. Copy the message `{{RepositoryName}} is a new repo by {{OwnerUsername}}: {{RepositoryURL}}` into a text editor
 1. Run `bundle exec rake organizations` to get a list of organizations to add
 1. Copy the list of organizations into the same file in the text editor
-1. Add `https://ifttt.com/create/` to the Bookmarks Toolbar
-1. Zoom all the way out
+1. Add `https://ifttt.com/create/` to the browser's bookmarks toolbar
+1. Zoom the browser all the way out
 
 #### Repeat
 
