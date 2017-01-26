@@ -26,10 +26,12 @@ def github_client
   @github_client ||= Octokit::Client.new(access_token: ENV['ACCESS_TOKEN'])
 end
 
-# @param [String] filename a filename
+# @param [String] basename a basename
 # @yieldparam [Hash] data the data that will be written
 # @yieldparam [Sawyer::Resource] repo the GitHub repository to process
-def process(filename)
+def process(basename)
+  filename = File.join('data', basename)
+
   headers = {accept: 'application/vnd.github.drax-preview+json'}
 
   data = {}

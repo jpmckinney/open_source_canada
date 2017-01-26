@@ -17,7 +17,7 @@ end
 namespace :licenses do
   desc "Write a licenses.yml file with each repository's license, according to GitHub"
   task :github do
-    process(filename) do |data,repo|
+    process(LICENSES_FILENAME) do |data,repo|
       if repo.license
         contents = github_client.repository_license_contents(repo.full_name, {accept: 'application/vnd.github.drax-preview+json'})
 
@@ -107,7 +107,7 @@ namespace :licenses do
 
     owners = ENV['ORGS'] && ENV['ORGS'].split(',')
 
-    File.open(LICENSES_FILENAME) do |f|
+    File.open(File.join('data', LICENSES_FILENAME)) do |f|
       YAML.load(f).each do |full_name, license|
         if matcher.call(license)
           owner, _ = full_name.split('/', 2)

@@ -2,7 +2,9 @@
 
 [@cdngovrepos](https://twitter.com/cdngovrepos) tweets every time any Canadian government opens a new code repository on GitHub, inspired by [@newgovrepos](https://twitter.com/newgovrepos) and [@newsnerdrepos](https://twitter.com/newsnerdrepos) and powered by [IFTTT](https://ifttt.com/).
 
-**Is a Canadian government's repositories not being tweeted? [Create an issue on GitHub](https://github.com/jpmckinney/open_source_canada/issues/new) or [contact James McKinney](mailto:james@slashpoundbang.com).** You may also want to add that government's GitHub organization to [GitHub's government community](https://government.github.com/community/#canada) by following these [instructions](https://government.github.com/community/#add-an-organization-to-the-list).
+**Is a Canadian government's repositories not being tweeted? [Create an issue on GitHub](https://github.com/jpmckinney/open_source_canada/issues/new) or [contact James McKinney](mailto:james@slashpoundbang.com).**
+
+You may also want to add that government's GitHub organization to [GitHub's government community](https://government.github.com/community/#canada) by following [these instructions](https://government.github.com/community/#add-an-organization-to-the-list).
 
 The following documentation describes how to:
 
