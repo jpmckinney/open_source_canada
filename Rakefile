@@ -59,14 +59,32 @@ def process(basename)
     end
   end
 
+  # Eliminate repositories for which we already have data.
   if ENV['ONLYNEW']
     repositories.reject!{|repo| data.key?(repo.full_name)}
   end
 
-  repositories.each do |repo|
-    print '.'
-    data[repo.full_name] ||= nil
-    yield data, repo
+  # Print the number of repositories to get a sense of how long it will take.
+  puts "#{repositories.size} repositories"
+
+  begin
+    repositories.each do |repo|
+      print '.'
+
+      data[repo.full_name] ||= nil
+
+      begin
+        yield data, repo
+      rescue Octokit::NotFound => e
+        puts e
+      end
+    end
+  rescue => e
+    # Save the progress if bailing.
+    if data[repo.full_name].nil?
+      data.delete(repo.full_name)
+    end
+    puts e
   end
 
   File.open(filename, 'w') do |f|
