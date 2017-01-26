@@ -1,8 +1,6 @@
 namespace :repos do
   desc 'Recommends repositories to delete or process further'
   task :analyze do
-    client = Octokit::Client.new(access_token: ENV['ACCESS_TOKEN'])
-
     date_threshold = (Time.now - 10_368_000).to_i # 120 days
 
     messages = []
@@ -10,12 +8,12 @@ namespace :repos do
     ENV['REPOS'].split(',').each do |full_name|
       print '.'
 
-      repo = client.repo(full_name)
+      repo = github_client.repo(full_name)
 
       begin
         commit = repo.rels[:commits].get.data[0].commit
         tree_sha = commit.tree.sha
-        tree = client.tree(full_name, tree_sha).tree
+        tree = github_client.tree(full_name, tree_sha).tree
         path = tree[0].path
 
         if tree.one? && path == 'README.md'
@@ -74,15 +72,13 @@ namespace :repos do
 
   desc 'Forks and clones the repositories'
   task :fork_and_clone do
-    client = Octokit::Client.new(access_token: ENV['ACCESS_TOKEN'])
-
     ENV['REPOS'].split(',').each do |full_name|
       _, repo = full_name.split('/', 2)
-      url = "https://github.com/#{client.user.login}/#{repo}"
+      url = "https://github.com/#{github_client.user.login}/#{repo}"
 
       unless Faraday.head(url).success?
         begin
-          client.fork(full_name)
+          github_client.fork(full_name)
         rescue Octokit::Forbidden => e
           $stderr.puts e.message
           next
@@ -107,19 +103,17 @@ namespace :repos do
     en_license = Faraday.get('https://raw.githubusercontent.com/wet-boew/wet-boew/master/License-en.txt').body
     fr_license = Faraday.get('https://raw.githubusercontent.com/wet-boew/wet-boew/master/Licence-fr.txt').body
 
-    client = Octokit::Client.new(access_token: ENV['ACCESS_TOKEN'])
-
     branch = 'license'
     message = 'Add license files'
-    login = client.user.login
+    login = github_client.user.login
 
     ENV['REPOS'].split(',').each do |full_name|
       _, repo = full_name.split('/', 2)
       if File.exist?(repo)
         Dir.chdir(repo) do
           git = Git.open(Dir.pwd)
-          origin = client.repo("#{login}:#{repo}")
-          upstream = client.repo(full_name)
+          origin = github_client.repo("#{login}:#{repo}")
+          upstream = github_client.repo(full_name)
 
           if File.exist?('License-en.txt') || File.exist?('Licence-fr.txt')
             abort "#{repo}: A license named 'License-en.txt' and/or 'Licence-fr.txt' already exists."
@@ -146,7 +140,7 @@ namespace :repos do
           git.commit(message)
           git.push('origin', branch)
 
-          client.create_pull_request(full_name, repo.default_branch, "#{login}:#{branch}", message)
+          github_client.create_pull_request(full_name, repo.default_branch, "#{login}:#{branch}", message)
         end
       end
     end

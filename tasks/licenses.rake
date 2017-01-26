@@ -1,4 +1,5 @@
 LICENSES_FILENAME = 'licenses.yml'
+
 CONFIDENCE_THRESHOLD = Licensee::CONFIDENCE_THRESHOLD
 CONFIDENCE_THRESHOLD_LOW = 70
 
@@ -16,47 +17,11 @@ end
 namespace :licenses do
   desc "Write a licenses.yml file with each repository's license, according to GitHub"
   task :github do
-    client = Octokit::Client.new(access_token: ENV['ACCESS_TOKEN'])
-    headers = {accept: 'application/vnd.github.drax-preview+json'}
-
-    licenses = {}
-
-    # Load existing licenses.
-    if File.exist?(LICENSES_FILENAME)
-      licenses = YAML.load(File.read(LICENSES_FILENAME))
-    end
-
-    # Get the repositories to process.
-    if ENV['REPOS']
-      repositories = ENV['REPOS'].split(',').map do |full_name|
-        client.repo(full_name, headers.dup)
-      end
-    else
-      # Get the organizations to process.
-      if ENV['ORGS']
-        organization_names = ENV['ORGS'].split(',')
-      else
-        organization_names = canadian_government_organizations
-      end
-
-      repositories = organization_names.to_a.sort.flat_map do |organization_name|
-        client.org_repos(organization_name, headers.merge(type: 'sources'))
-      end
-    end
-
-    if ENV['ONLYNEW']
-      repositories.reject!{|repo| licenses.key?(repo.full_name)}
-    end
-
-    repositories.each do |repo|
-      print '.'
-
-      licenses[repo.full_name] ||= nil
-
+    process(filename) do |data,repo|
       if repo.license
-        contents = client.repository_license_contents(repo.full_name, headers.dup)
+        contents = github_client.repository_license_contents(repo.full_name, {accept: 'application/vnd.github.drax-preview+json'})
 
-        licenses[repo.full_name] = {
+        data[repo.full_name] = {
           'id' => repo.license.spdx_id,
           'url' => contents.html_url,
         }
@@ -84,7 +49,7 @@ namespace :licenses do
           matched_file = Licensee::Project::LicenseFile.new(body, File.basename(contents.download_url))
 
           if matched_file.license
-            licenses[repo.full_name]['id'] = matched_file.license.meta['spdx-id']
+            data[repo.full_name]['id'] = matched_file.license.meta['spdx-id']
           else
             # CA-CROWN-COPYRIGHT.txt's `max_delta`, which is based on `inverse_confidence_threshold`,
             # is too small to match due to the file's small size.
@@ -95,7 +60,7 @@ namespace :licenses do
             matches = matcher.licenses_by_similiarity.select{|_, similarity| similarity >= CONFIDENCE_THRESHOLD_LOW}
 
             unless matches.empty?
-              licenses[repo.full_name].merge!({
+              data[repo.full_name].merge!({
                 'id' => matches[0][0].meta['spdx-id'],
                 'confidence' => matches[0][1],
               })
@@ -114,7 +79,7 @@ namespace :licenses do
 
           if matched_file
             if matched_file.license
-              licenses[repo.full_name] = {
+              data[repo.full_name] = {
                 'id' => matched_file.license.meta['spdx-id'],
                 'url' => "https://github.com/#{repo.full_name}/blob/#{repo.default_branch}/#{matched_file.filename}",
                 'confidence' => matched_file.confidence,
@@ -124,7 +89,7 @@ namespace :licenses do
               matches = matcher.licenses_by_similiarity
 
               unless matches.empty?
-                licenses[repo.full_name] = {
+                data[repo.full_name] = {
                   'id' => matches[0][0].meta['spdx-id'],
                   'url' => "https://github.com/#{repo.full_name}/blob/#{repo.default_branch}/#{matched_file.filename}",
                   'confidence' => matches[0][1],
@@ -134,10 +99,6 @@ namespace :licenses do
           end
         end
       end
-    end
-
-    File.open(LICENSES_FILENAME, 'w') do |f|
-      f.write(YAML.dump(licenses))
     end
   end
 
