@@ -1,4 +1,4 @@
-# Source code licenses
+# Software licenses
 
 The following documentation describes how to:
 

@@ -12,8 +12,8 @@ Care about open data? Head over to the [database of Canadian open government dat
 
 Then, follow the documentation relating to:
 
-* [What software licenses Canadian governments use](docs/licenses.md)
-* [Tweeting each time a Canadian government creates a GitHub repository](docs/cdngovrepos.md)
-* [What programming languages Canadian governments use](docs/miscellaneous.md)
+* [What software licenses Canadian governments use](docs/licenses.md#readme)
+* [Tweeting each time a Canadian government creates a GitHub repository](docs/cdngovrepos.md#readme)
+* [What programming languages Canadian governments use](docs/miscellaneous.md#readme)
 
 Copyright (c) 2017 James McKinney, released under the MIT license
