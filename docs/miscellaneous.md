@@ -1,5 +1,12 @@
 # Miscellaneous tasks
 
+The following documentation describes how to:
+
+* [Collect the languages used by code repositories controlled by Canadian governments on GitHub.](#collect-language-data)
+* [List the GitHub organizations controlled by Canadian governments](#list-github-organizations-controlled-by-canadian-governments)
+
+Just want the data on programming language usage? [Download the YAML.](https://raw.githubusercontent.com/jpmckinney/open_source_canada/master/data/languages.yml)
+
 ## Collect language data
 
 Collect the languages in which repositories are written on GitHub:

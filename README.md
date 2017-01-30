@@ -4,6 +4,13 @@ This project audits the source code repositories published by Canadian governmen
 
 Care about open data? Head over to the [database of Canadian open government data catalogs](https://github.com/jpmckinney/open_data_canada).
 
+## Downloads
+
+Download the data as YAML:
+
+* [Software license usage](https://raw.githubusercontent.com/jpmckinney/open_source_canada/master/data/licenses.yml)
+* [Programming language usage](https://raw.githubusercontent.com/jpmckinney/open_source_canada/master/data/languages.yml)
+
 ## Usage
 
 [Generate a personal access token on GitHub](https://github.com/settings/tokens) and set an `ACCESS_TOKEN` environment variable:

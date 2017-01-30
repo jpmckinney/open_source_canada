@@ -6,6 +6,8 @@ The following documentation describes how to:
 * [Automate the process of issuing pull requests to add open source licenses to the repositories without licenses.](#add-licenses-to-repositories-without-licenses)
 * [Semi-automate the process of improving this project's ability to identify licenses.](#determine-licenses-of-repositories-with-unrecognized-licenses)
 
+Just want the data on software license usage? [Download the YAML.](https://raw.githubusercontent.com/jpmckinney/open_source_canada/master/data/licenses.yml)
+
 ## Collect licensing data
 
 Collect the licenses under which repositories are released on GitHub:
