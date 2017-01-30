@@ -24,4 +24,12 @@ Then, follow the documentation relating to:
 * [Tweeting each time a Canadian government creates a GitHub repository](docs/cdngovrepos.md#readme)
 * [What programming languages Canadian governments use](docs/miscellaneous.md#readme)
 
+### Regular maintenance
+
+    bundle exec rake licenses:github ONLYNEW=true
+    bundle exec rake languages:github ONLYNEW=true
+    bundle exec rake organizations > data/organizations.txt
+    bundle exec rake licenses:none
+    bundle exec rake licenses:unknown
+
 Copyright (c) 2017 James McKinney, released under the MIT license

@@ -2,10 +2,10 @@
 
 The following documentation describes how to:
 
-* [Collect the languages used by code repositories controlled by Canadian governments on GitHub.](#collect-language-data)
+* [Collect the languages used by code repositories controlled by Canadian governments on GitHub](#collect-language-data)
 * [List the GitHub organizations controlled by Canadian governments](#list-github-organizations-controlled-by-canadian-governments)
 
-Download the data as YAML:
+Or, download the data as YAML:
 
 * [Programming language usage](https://raw.githubusercontent.com/jpmckinney/open_source_canada/master/data/languages.yml)
 * [GitHub organizations controlled by Canadian governments](https://raw.githubusercontent.com/jpmckinney/open_source_canada/master/data/organizations.txt)
