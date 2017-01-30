@@ -31,3 +31,5 @@ Or for only specific *repositories*:
 ## List GitHub organizations controlled by Canadian governments
 
     bundle exec rake organizations > data/organizations.txt
+
+If the organizations have changed, [update @cdngovrepos' IFTTT applets](docs/cdngovrepos.md#readme).
