@@ -18,6 +18,14 @@ Collect the licenses for only the repositories that were created since the last 
 
     bundle exec rake licenses:github ONLYNEW=true
 
+Or for only specific *organizations*:
+
+    bundle exec rake licenses:github ORGS=wet-boew,open-data
+
+Or for only specific *repositories*:
+
+    bundle exec rake licenses:github REPOS=wet-boew/codefest,wet-boew/wet-boew-php
+
 ## Add licenses to repositories without licenses
 
 This section describes tools to submit pull requests to add licenses to repositories that don't have any.

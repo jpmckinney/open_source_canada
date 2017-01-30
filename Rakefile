@@ -38,7 +38,7 @@ def process(basename)
 
   # Load existing data.
   if File.exist?(filename)
-    data = YAML.load(File.read(filename))
+    data = YAML.load_file(filename)
   end
 
   # Get the repositories to process.
@@ -77,18 +77,18 @@ def process(basename)
         yield data, repo
       rescue Octokit::NotFound => e
         puts e
+      rescue => e
+        puts "#{e.class}: #{e}"
+        if data[repo.full_name].nil?
+          data.delete(repo.full_name)
+        end
+        puts e.backtrace.join("\n")
       end
     end
-  rescue => e
-    # Save the progress if bailing.
-    if data[repo.full_name].nil?
-      data.delete(repo.full_name)
-    end
-    puts e
   end
 
   File.open(filename, 'w') do |f|
-    f.write(YAML.dump(data))
+    f.write(YAML.dump(data.sort.to_h))
   end
 end
 
