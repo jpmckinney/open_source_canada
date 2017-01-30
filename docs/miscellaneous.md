@@ -30,4 +30,4 @@ Or for only specific *repositories*:
 
 ## List GitHub organizations controlled by Canadian governments
 
-    bundle exec rake organizations
+    bundle exec rake organizations > data/organizations.txt
