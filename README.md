@@ -10,6 +10,7 @@ Download the data as YAML:
 
 * [Software license usage](https://raw.githubusercontent.com/jpmckinney/open_source_canada/master/data/licenses.yml)
 * [Programming language usage](https://raw.githubusercontent.com/jpmckinney/open_source_canada/master/data/languages.yml)
+* [GitHub organizations controlled by Canadian governments](https://raw.githubusercontent.com/jpmckinney/open_source_canada/master/data/organizations.txt)
 
 ## Usage
 
