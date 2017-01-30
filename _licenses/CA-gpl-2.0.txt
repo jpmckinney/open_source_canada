@@ -3,7 +3,7 @@ title: GNU General Public License v2.0
 spdx-id: GPL-2.0
 
 using:
-  - https://github.com/tbs-sct/GCcollab/blob/gccollab/LICENSE.txt
+  - https://github.com/gctools-outilsgc/gccollab/blob/gccollab/LICENSE.txt
 
 notes: Takes the terms and conditions of gpl-2.0.txt
 

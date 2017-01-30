@@ -92,8 +92,8 @@ def process(basename)
   end
 end
 
-# @return [Array<String>] GitHub organizations controlled by Canadian governments
-def canadian_government_organizations
+# @return [Array<String>] GitHub organizations controlled by the Government of Canada
+def federal_government_organizations
   organization_names = Set.new
 
   Faraday.get('https://raw.githubusercontent.com/canada-ca/welcome/master/Organizations-Organisations.md').body.scan(/\(([a-z]+:[^)]+)\)/).each do |url|
@@ -103,6 +103,13 @@ def canadian_government_organizations
     end
   end
 
+  organization_names
+end
+
+# @return [Array<String>] GitHub organizations controlled by Canadian governments
+def canadian_government_organizations
+  organization_names = Set.new
+  organization_names += federal_government_organizations
   organization_names += YAML.load(Faraday.get('https://raw.githubusercontent.com/github/government.github.com/gh-pages/_data/governments.yml').body)['Canada'].map(&:downcase)
 end
 
