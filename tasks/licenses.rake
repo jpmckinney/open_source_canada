@@ -105,12 +105,12 @@ namespace :licenses do
   def print_repository_urls(matcher, formatter)
     matches = []
 
-    owners = ENV['ORGS'] && ENV['ORGS'].split(',')
+    owners = ENV['ORGS'] && ENV['ORGS'].split(',').map(&:downcase)
 
     File.open(File.join('data', LICENSES_FILENAME)) do |f|
       YAML.load(f).each do |full_name, license|
         if matcher.call(license)
-          owner, _ = full_name.split('/', 2)
+          owner, _ = full_name.downcase.split('/', 2)
           if owners.nil? || owners.include?(owner)
             matches << [full_name, license]
           end
@@ -135,10 +135,18 @@ namespace :licenses do
     )
   end
 
-  desc 'Prints URLs for repositories with unknown licenses, according to GitHub'
+  desc 'Prints license URLs for repositories with unknown licenses, according to GitHub'
   task :unknown do
     print_repository_urls(
-      ->(license) { license && license['id'].nil? }, 
+      ->(license) { license && license['id'].nil? },
+      ->(full_name, license) { license['url'] }
+    )
+  end
+
+  desc 'Prints license URLs for repositories with licenses, according to GitHub'
+  task :any do
+    print_repository_urls(
+      ->(license) { license },
       ->(full_name, license) { license['url'] }
     )
   end

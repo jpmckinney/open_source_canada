@@ -46,15 +46,20 @@ Analyze selected repositories (`REPOS`) for further processing:
 
     bundle exec rake repos:analyze REPOS=wet-boew/codefest,wet-boew/wet-boew-php,wet-boew/techspecs
 
-Repositories analyzed as `empty_repository` or `stub_repository` should be reported for deletion as a GitHub issue. The output includes text to use in the issue description. Create the issue on an active repository of the organization to increase its visibility.
+Repositories analyzed as `empty_repository` or `stub_repository` should be reported for deletion as a GitHub issue; the output includes text to use in the issue's description. Create the issue on an active repository of the organization to increase its visibility.
 
-Other repositories may require pull requests to add licenses. Fork and clone selected repositories (`REPOS`):
+Other repositories, especially those analyzed as `multiple_files`, may require pull requests to add licenses. Fork and clone selected repositories (`REPOS`):
 
     bundle exec rake repos:fork_and_clone REPOS=wet-boew/codefest,wet-boew/wet-boew-php
 
-Then, add licenses to selected repositories (`REPOS`) and open a pull request on GitHub. If a repository was analyzed as having multiple branches, you may need to perform this step manually. There is no undo!
+Select a license among those already in use by the organization (`ORGS`):
 
-    bundle exec rake repos:license REPOS=wet-boew/codefest,wet-boew/wet-boew-php
+    bundle exec rake licenses:any ORGS=wet-boew
+
+Then, add licenses to selected repositories (`REPOS`) and open a pull request on GitHub. If a repository was analyzed as having multiple branches, you may need to perform this step manually. Set the paths or URLs of the license files (`LICENSE_PATHS`). Set the commit message (`COMMIT_MESSAGE`), which is `"Add open source license"` by default. **There is no undo!**
+
+    export LICENSE_PATHS=https://raw.githubusercontent.com/wet-boew/wet-boew/master/License-en.txt,https://raw.githubusercontent.com/wet-boew/wet-boew/master/Licence-fr.txt
+    bundle exec rake repos:license REPOS=wet-boew/codefest,wet-boew/wet-boew-php COMMIT_MESSAGE="Add MIT license"
 
 Once your pull requests are merged, you can easily remove the unneeded forks using [remove-github-forks](https://github.com/denis-sokolov/remove-github-forks/).
 
@@ -101,3 +106,36 @@ Then, list the repositories with unrecognized licenses as a comma-separated list
     bundle exec rake licenses:none CSV=true
 
 And run the `licenses:github` task to recognize additional licenses thanks to your changes. Repeat this section until all licenses are recognized.
+
+## Cheat sheet
+
+        # Select one organization to work on.
+        export ORGS=
+
+        export REPOS=`bundle exec rake licenses:none CSV=true`
+
+        # Look for an appropriate license. If you need different licenses for
+        # different repositories, like GPL-2.0 for Drupal modules, change the
+        # REPOS variable as appropriate.
+        bundle exec rake licenses:any
+
+        # Set the path to the license's URL. If you had to manually create a
+        # license file, set the path to the file.
+        export LICENSE_PATHS=
+
+        # Check whether any repositories are empty or stubs before forking.
+        # Change the REPOS variable as appropriate.
+        bundle exec rake repos:analyze
+
+        # Fork and clone the repositories.
+        bundle exec rake repos:fork_and_clone
+
+        # Set a commit message like "Add MIT license"
+        export COMMIT_MESSAGE=
+
+        # Check the values of REPOS, COMMIT_MESSAGE and LICENSE_PATHS as the
+        # next step has no undo and affects others!
+        printenv
+
+        # Create the pull requests.
+        bundle exec rake repos:license
