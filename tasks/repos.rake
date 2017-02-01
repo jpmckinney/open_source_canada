@@ -72,9 +72,11 @@ namespace :repos do
 
   desc 'Forks and clones the repositories'
   task :fork_and_clone do
+    login = github_client.user.login
+
     ENV['REPOS'].split(',').each do |full_name|
       _, repo = full_name.split('/', 2)
-      url = "https://github.com/#{github_client.user.login}/#{repo}"
+      url = "https://github.com/#{login}/#{repo}"
 
       unless Faraday.head(url).success?
         begin
@@ -88,7 +90,7 @@ namespace :repos do
       unless File.exist?(repo)
         loop do
           if Faraday.head(url).success?
-            Git.clone("git@github.com:#{path}.git", repo)
+            Git.clone("git@github.com:#{login}/#{repo}.git", repo)
             break
           else
             sleep 1
@@ -100,11 +102,19 @@ namespace :repos do
 
   desc 'Adds licenses to the repositories'
   task :license do
-    en_license = Faraday.get('https://raw.githubusercontent.com/wet-boew/wet-boew/master/License-en.txt').body
-    fr_license = Faraday.get('https://raw.githubusercontent.com/wet-boew/wet-boew/master/Licence-fr.txt').body
+    license_contents = {}
+
+    ENV['LICENSE_PATHS'].split(',').each do |path|
+      filename = File.basename(path)
+      if URI.parse(path).scheme
+        license_contents[filename] = Faraday.get(path).body
+      else
+        license_contents[filename] = File.read(path)
+      end
+    end
 
     branch = 'license'
-    message = 'Add license files'
+    message = ENV['COMMIT_MESSAGE'] || 'Add open source license'
     login = github_client.user.login
 
     ENV['REPOS'].split(',').each do |full_name|
@@ -112,11 +122,11 @@ namespace :repos do
       if File.exist?(repo)
         Dir.chdir(repo) do
           git = Git.open(Dir.pwd)
-          origin = github_client.repo("#{login}:#{repo}")
+          origin = github_client.repo("#{login}/#{repo}")
           upstream = github_client.repo(full_name)
 
-          if File.exist?('License-en.txt') || File.exist?('Licence-fr.txt')
-            abort "#{repo}: A license named 'License-en.txt' and/or 'Licence-fr.txt' already exists."
+          if license_contents.keys.any?{ |filename| File.exist?(filename)}
+            abort "#{repo}: A license file already exists."
           end
           if git.branches[branch]
             abort "#{repo}: A local branch named '#{branch}' already exists."
@@ -128,19 +138,18 @@ namespace :repos do
             abort "#{repo}: A pull request titled '#{message}' already exists."
           end
 
-          File.open('License-en.txt', 'w') do |f|
-            f.write(en_license)
-          end
-          File.open('Licence-fr.txt', 'w') do |f|
-            f.write(fr_license)
+          license_contents.each do |filename,content|
+            File.open(filename, 'w') do |f|
+              f.write(content)
+            end
           end
 
           git.branch(branch).checkout
-          git.add(%w(License-en.txt Licence-fr.txt))
+          git.add(license_contents.keys)
           git.commit(message)
           git.push('origin', branch)
 
-          github_client.create_pull_request(full_name, repo.default_branch, "#{login}:#{branch}", message)
+          github_client.create_pull_request(full_name, origin.default_branch, "#{login}:#{branch}", message)
         end
       end
     end
