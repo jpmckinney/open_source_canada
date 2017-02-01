@@ -58,8 +58,7 @@ Select a license among those already in use by the organization (`ORGS`):
 
 Then, add licenses to selected repositories (`REPOS`) and open a pull request on GitHub. If a repository was analyzed as having multiple branches, you may need to perform this step manually. Set the paths or URLs of the license files (`LICENSE_PATHS`). Set the commit message (`COMMIT_MESSAGE`), which is `"Add open source license"` by default. **There is no undo!**
 
-    export LICENSE_PATHS=https://raw.githubusercontent.com/wet-boew/wet-boew/master/License-en.txt,https://raw.githubusercontent.com/wet-boew/wet-boew/master/Licence-fr.txt
-    bundle exec rake repos:license REPOS=wet-boew/codefest,wet-boew/wet-boew-php COMMIT_MESSAGE="Add MIT license"
+    bundle exec rake repos:license REPOS=wet-boew/codefest,wet-boew/wet-boew-php COMMIT_MESSAGE="Add MIT license" LICENSE_PATHS=https://raw.githubusercontent.com/wet-boew/wet-boew/master/License-en.txt,https://raw.githubusercontent.com/wet-boew/wet-boew/master/Licence-fr.txt
 
 Once your pull requests are merged, you can easily remove the unneeded forks using [remove-github-forks](https://github.com/denis-sokolov/remove-github-forks/).
 
@@ -119,10 +118,6 @@ And run the `licenses:github` task to recognize additional licenses thanks to yo
         # REPOS variable as appropriate.
         bundle exec rake licenses:any
 
-        # Set the path to the license's URL. If you had to manually create a
-        # license file, set the path to the file.
-        export LICENSE_PATHS=
-
         # Check whether any repositories are empty or stubs before forking.
         # Change the REPOS variable as appropriate.
         bundle exec rake repos:analyze
@@ -130,8 +125,13 @@ And run the `licenses:github` task to recognize additional licenses thanks to yo
         # Fork and clone the repositories.
         bundle exec rake repos:fork_and_clone
 
+        # Set the path to the license's URL (the raw content, not the GitHub
+        # page!). If you had to manually create a license file, set the path to
+        # the file.
+        export LICENSE_PATHS=
+
         # Set a commit message like "Add MIT license"
-        export COMMIT_MESSAGE=
+        export COMMIT_MESSAGE="Add MIT license"
 
         # Check the values of REPOS, COMMIT_MESSAGE and LICENSE_PATHS as the
         # next step has no undo and affects others!

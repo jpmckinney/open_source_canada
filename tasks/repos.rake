@@ -89,6 +89,7 @@ namespace :repos do
 
       unless File.exist?(repo)
         loop do
+          # TODO: This check is unsufficient.
           if Faraday.head(url).success?
             Git.clone("git@github.com:#{login}/#{repo}.git", repo)
             break
