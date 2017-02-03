@@ -50,6 +50,8 @@ def process(basename)
     # Get the organizations to process.
     if ENV['ORGS']
       organization_names = ENV['ORGS'].split(',')
+    elsif ENV['GROUP']
+      organization_names = github_government_community[ENV['GROUP']].map(&:downcase)
     else
       organization_names = canadian_government_organizations
     end
@@ -110,7 +112,12 @@ end
 def canadian_government_organizations
   organization_names = Set.new
   organization_names += federal_government_organizations
-  organization_names += YAML.load(Faraday.get('https://raw.githubusercontent.com/github/government.github.com/gh-pages/_data/governments.yml').body)['Canada'].map(&:downcase)
+  organization_names += github_government_community['Canada'].map(&:downcase)
+end
+
+# @return [Hash] GitHub organizations organized into groups
+def github_government_community
+  YAML.load(Faraday.get('https://raw.githubusercontent.com/github/government.github.com/gh-pages/_data/governments.yml').body)
 end
 
 Dir['tasks/*.rake'].each { |r| import r }
