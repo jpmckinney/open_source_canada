@@ -204,27 +204,58 @@ CityofOttawa/Apps4Ottawa-Website:
 CityofOttawa/Ottawa-ckan:
   id: MIT
   url: https://github.com/CityofOttawa/Ottawa-ckan/blob/master/COPYING
-CityofOttawa/Popup_Survey: 
-CityofOttawa/document_accessibility_report: 
-CityofOttawa/feeds_translation: 
-CityofOttawa/immigration_zen: 
-CityofOttawa/light_box_image_gallery: 
-CityofOttawa/ott_image_styles: 
-CityofOttawa/ottawa_panelized_page_nav: 
-CityofOttawa/ottawa_permits: 
-CityofOttawa/ottawa_toggle_block: 
-CityofOttawa/ottawa_vjs_skin: 
+CityofOttawa/Popup_Survey:
+  id: GPL-2.0
+  note: Drupal
+CityofOttawa/document_accessibility_report:
+  id: GPL-2.0
+  note: Drupal
+CityofOttawa/feeds_translation:
+  id: GPL-2.0
+  note: Drupal
+CityofOttawa/immigration_zen:
+  id: GPL-2.0
+  note: Drupal
+CityofOttawa/light_box_image_gallery:
+  id: GPL-2.0
+  note: Drupal
+CityofOttawa/ott_image_styles:
+  id: GPL-2.0
+  note: Drupal
+CityofOttawa/ottawa_panelized_page_nav:
+  id: GPL-2.0
+  note: Drupal
+CityofOttawa/ottawa_patches: 
+CityofOttawa/ottawa_permits:
+  id: GPL-2.0
+  note: Drupal
+CityofOttawa/ottawa_toggle_block:
+  id: GPL-2.0
+  note: Drupal
+CityofOttawa/ottawa_vjs_skin:
+  id: GPL-2.0
+  note: Drupal
 CityofOttawa/ottdoc_make: 
-CityofOttawa/ottdoc_zen: 
+CityofOttawa/ottdoc_zen:
+  id: GPL-2.0
+  note: Drupal
 CityofOttawa/shibboleth_auth: 
-CityofOttawa/site_wide_warning: 
+CityofOttawa/site_wide_warning:
+  id: GPL-2.0
+  note: Drupal
 CityofOttawa/spotlight_leaflet_map: 
-CityofOttawa/toc_formatter: 
-CityofOttawa/webform_gmap_location: 
+CityofOttawa/toc_formatter:
+  id: GPL-2.0
+  note: Drupal
+CityofOttawa/webform_gmap_location:
+  id: GPL-2.0
+  note: Drupal
 CityofOttawa/webform_sidkey:
   id: GPL-2.0
   url: https://github.com/CityofOttawa/webform_sidkey/blob/master/LICENSE
-CityofOttawa/youth_portal_dashboard: 
+CityofOttawa/youth_portal_dashboard:
+  id: GPL-2.0
+  note: Drupal
 CityofToronto/CPCRestProxy: 
 CityofToronto/bdit_before-after: 
 CityofToronto/bdit_congestion:
@@ -939,7 +970,9 @@ wet-boew/wet-boew-dotnet:
   id: MIT
   url: https://github.com/wet-boew/wet-boew-dotnet/blob/master/License-en.txt
 wet-boew/wet-boew-dotnetnuke: 
-wet-boew/wet-boew-drupal: 
+wet-boew/wet-boew-drupal:
+  id: GPL-2.0
+  note: Drupal
 wet-boew/wet-boew-drupal8: 
 wet-boew/wet-boew-elgg: 
 wet-boew/wet-boew-epub:

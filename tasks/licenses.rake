@@ -14,6 +14,14 @@ class Licensee::License
   end
 end
 
+def has_extensions?(filenames, extensions)
+  extensions.all?{|extension| filenames.any?{|filename| File.extname(filename) == extension}}
+end
+
+def has_files?(filenames, basenames)
+  basenames.all?{|basename| filenames.any?{|filename| File.basename(filename) == basename}}
+end
+
 namespace :licenses do
   desc "Write a licenses.yml file with each repository's license, according to GitHub"
   task :github do
@@ -95,6 +103,16 @@ namespace :licenses do
                   'confidence' => matches[0][1],
                 }
               end
+            end
+          else
+            filenames = Dir[File.join(dir, '**')]
+            # Make exception for Drupal modules, installation profiles and themes.
+            # @see https://github.com/wet-boew/wet-boew-drupal/pull/1895
+            if has_extensions?(filenames, ['.info']) && (has_extensions?(filenames, ['.module']) || has_extensions?(filenames, ['.install', '.profile']) || has_files?(filenames, ['template.php', 'theme-settings.php']))
+              data[repo.full_name] = {
+                'id' => 'GPL-2.0',
+                'note' => 'Drupal',
+              }
             end
           end
         end
