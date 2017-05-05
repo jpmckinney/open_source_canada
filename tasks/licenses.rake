@@ -8,8 +8,8 @@ CONFIDENCE_THRESHOLD_LOW = 70
 class Licensee::License
   class << self
     def license_dir
-      dir = File.dirname(__FILE__)
-      File.expand_path '_licenses', dir
+      dir = File.dirname(File.dirname(__FILE__))
+      File.expand_path('_licenses', dir)
     end
   end
 end

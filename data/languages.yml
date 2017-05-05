@@ -27,6 +27,9 @@ AAFC-MBB/NGSSampleManager:
   :Makefile: 578
 AAFC-MBB/RemoveSpecReplicate:
   :Python: 4643
+AAFC-MBB/Scalable-Galaxy-Env:
+  :Shell: 4242
+  :Python: 2257
 AAFC-MBB/acceptor:
   :Shell: 2966
 AAFC-MBB/android-mock-ws:
@@ -89,6 +92,9 @@ AAFC-MBB/rpmpaths:
 AAFC-MBB/sge-puppet:
   :Shell: 10479
   :Pascal: 9957
+AAFC-MBB/snakemake-amplicon-metagenomics:
+  :Python: 13114
+  :Shell: 5242
 AAFC-MBB/snakemake-mothur:
   :Python: 11525
 AAFC-MBB/snakemake-trimmomatic:
@@ -140,6 +146,7 @@ BCDevExchange/WORKPLAN:
   :CSS: 553194
   :Smarty: 430449
   :HTML: 7858
+BCDevExchange/assets: {}
 BCDevExchange/bc-property-api-specification: {}
 BCDevExchange/bca-api:
   :JavaScript: 3347
@@ -200,10 +207,13 @@ CityofOttawa/light_box_image_gallery:
   :PHP: 20856
 CityofOttawa/ott_image_styles:
   :PHP: 123
+CityofOttawa/ottawa_gallery:
+  :PHP: 27728
 CityofOttawa/ottawa_panelized_page_nav:
   :JavaScript: 4663
   :CSS: 3520
   :PHP: 1718
+CityofOttawa/ottawa_patches: {}
 CityofOttawa/ottawa_permits:
   :CSS: 2797
   :JavaScript: 2738
@@ -262,6 +272,7 @@ CityofToronto/bdit_prj_october_report:
   :Jupyter Notebook: 821943
   :Python: 12728
 CityofToronto/bdit_template: {}
+CityofToronto/bdit_traffic_evaluation: {}
 CityofToronto/bdit_volumes:
   :Python: 19733
   :R: 5992
@@ -418,6 +429,10 @@ abgov/ckanext-workflow:
 bcgov/BC-Policy-Framework-For-GitHub: {}
 bcgov/BC-demography: {}
 bcgov/BCStats: {}
+bcgov/BCWaterDischargeAnalysis:
+  :R: 92616
+bcgov/BCWaterDischargeAnalysis-SampleScripts:
+  :R: 9804
 bcgov/CANSIM-data-viewer:
   :HTML: 2305100
   :R: 16568
@@ -434,6 +449,14 @@ bcgov/EnvReportBC:
   :R: 32
 bcgov/FGDB-Standards-Tools:
   :Python: 54361
+bcgov/Gov-2.0-Bootstrap-Skeleton:
+  :HTML: 137776
+  :CSS: 64165
+  :JavaScript: 37912
+bcgov/LTEM-sample-analyses:
+  :HTML: 20109390
+  :R: 162522
+bcgov/MSL: {}
 bcgov/Mock-Server:
   :JavaScript: 1270
 bcgov/MyGovBC-CAPTCHA-Service: {}
@@ -469,12 +492,20 @@ bcgov/MyGovBC-widget-sharedservices-foodsafe:
   :JavaScript: 3894
 bcgov/OCIO-integrated-planning: {}
 bcgov/OCIO-service-development: {}
+bcgov/Oahu-UI:
+  :JavaScript: 1254310
+  :CSS: 109947
+  :HTML: 15662
+  :Shell: 62
 bcgov/PMO-Database: {}
 bcgov/R-presentation:
   :HTML: 761384
 bcgov/REST-API-Development-Guide:
   :Ruby: 2707
   :CSS: 37
+bcgov/SSD-methods:
+  :HTML: 3226466
+  :R: 125842
 bcgov/SchemaSpy:
   :JavaScript: 1927
 bcgov/SecurityAwareness:
@@ -505,6 +536,7 @@ bcgov/bc-laws-api:
   :XSLT: 141176
 bcgov/bc-population-indicator:
   :R: 11989
+bcgov/bcairquality: {}
 bcgov/bcdc-devops:
   :Shell: 14703
   :Ruby: 5888
@@ -552,6 +584,9 @@ bcgov/cpf:
   :PLSQL: 2452
   :PLpgSQL: 1768
   :Visual Basic: 1703
+bcgov/csnr-dmod: {}
+bcgov/cu-analysis:
+  :R: 35456
 bcgov/data-driven-decision-making: {}
 bcgov/data-driven-decision-making-guide:
   :Ruby: 2579
@@ -566,6 +601,10 @@ bcgov/data-fp-features:
   :HTML: 57298
   :CSS: 1740
 bcgov/databc-web-map-services: {}
+bcgov/dbc-cms-vis: {}
+bcgov/dbc-kml-apps:
+  :XSLT: 12587
+  :FreeMarker: 16
 bcgov/dbcrss:
   :Python: 6619
   :HTML: 4901
@@ -579,6 +618,12 @@ bcgov/eba-guide:
 bcgov/envreportutils:
   :R: 44834
   :Makefile: 615
+bcgov/epic-mobile-app-android:
+  :Java: 43700
+bcgov/epic-mobile-app-ios:
+  :Swift: 81952
+  :Objective-C: 697
+  :Ruby: 420
 bcgov/esm-server:
   :JavaScript: 1966832
   :HTML: 728548
@@ -603,6 +648,13 @@ bcgov/guide-of-guides:
   :Ruby: 2579
   :CSS: 2569
 bcgov/gwa: {}
+bcgov/gwells:
+  :HTML: 77900
+  :CSS: 62911
+  :JavaScript: 37912
+  :Python: 37129
+  :Shell: 1416
+  :PLpgSQL: 722
 bcgov/hets:
   :C#: 559857
   :JavaScript: 44982
@@ -612,6 +664,27 @@ bcgov/hets:
   :Batchfile: 4673
   :Shell: 2056
   :PowerShell: 805
+bcgov/housing-data-challenge-exponentian:
+  :JavaScript: 3563678
+  :CSS: 2487166
+  :HTML: 202634
+  :Ruby: 30265
+bcgov/housing-data-challenge-foundry-spatial:
+  :Vue: 21104
+  :JavaScript: 19592
+  :HTML: 370
+bcgov/housing-data-challenge-plot-scatter:
+  :Jupyter Notebook: 136614
+  :JavaScript: 105662
+  :CSS: 10475
+  :HTML: 1357
+bcgov/housing-data-challenge-plotly:
+  :R: 44628
+  :Makefile: 241
+  :CSS: 190
+bcgov/housing-data-challenge-ruby:
+  :R: 57491
+  :CSS: 1340
 bcgov/housing-data-visualization-project: {}
 bcgov/innovation-toolkit:
   :HTML: 94229
@@ -624,6 +697,7 @@ bcgov/invasive-species-indicator:
   :R: 44995
 bcgov/issue-aggregator:
   :JavaScript: 4003
+bcgov/kura-emulator: {}
 bcgov/ltema:
   :JavaScript: 180905
   :Python: 5251
@@ -632,14 +706,29 @@ bcgov/mamcgirr_test: {}
 bcgov/mode1-guide:
   :Ruby: 2745
   :CSS: 37
+bcgov/moti-iot-challenges: {}
+bcgov/moti-iot-poc:
+  :JavaScript: 1254310
+  :CSS: 109947
+  :HTML: 43804
+  :Java: 27288
+  :C#: 14627
+  :Shell: 477
 bcgov/mygovbc:
   :Shell: 135
 bcgov/mygovbc-foodsafe:
   :Shell: 135
 bcgov/mygovbc-foodsafe-nginx: {}
 bcgov/mygovbc-nginx: {}
+bcgov/navUnit:
+  :Groovy: 3535
 bcgov/nrs-sparx-automation:
   :JavaScript: 41228
+bcgov/oahu-api:
+  :C#: 14627
+bcgov/oahu-dbsrv:
+  :Java: 11924
+  :Shell: 415
 bcgov/ols-devkit: {}
 bcgov/openconsult: {}
 bcgov/ozone-caaqs-analysis:
@@ -683,6 +772,9 @@ bcgov/smtp-om-core:
   :SQLPL: 17838
   :Java: 2120
 bcgov/tfrs: {}
+bcgov/tfrs-functional-test-runner: {}
+bcgov/tfrs-sonar-scanner:
+  :Java: 594
 bcgov/tire-recycling-indicator:
   :R: 3739
 bcgov/update-VRI-volumes:
@@ -704,10 +796,12 @@ cityofsurrey/ckanext-surrey:
   :Python: 17196
   :JavaScript: 16737
   :CSS: 7875
+cityofsurrey/docker-java: {}
 cityofsurrey/docker-node: {}
 cityofsurrey/docker-node-oracle:
   :Shell: 113
 cityofsurrey/javascript: {}
+cityofsurrey/kapa: {}
 cityofsurrey/landscape-api: {}
 cityofsurrey/landscape-node:
   :JavaScript: 12462
@@ -751,6 +845,9 @@ fgpv-vpgf/doc-site-sample:
   :HTML: 41475
   :CSS: 22649
   :CoffeeScript: 3263
+fgpv-vpgf/docdash:
+  :JavaScript: 106738
+  :CSS: 10849
 fgpv-vpgf/fgpv-vpgf:
   :JavaScript: 983653
   :HTML: 165446
@@ -843,6 +940,19 @@ infra-geo-ouverte/igo2:
   :Shell: 771
   :HTML: 595
   :Nginx: 391
+infra-geo-ouverte/igo2-api:
+  :TypeScript: 71655
+  :JavaScript: 1588
+infra-geo-ouverte/igo2-demo:
+  :TypeScript: 9056
+  :JavaScript: 1996
+  :CSS: 865
+  :HTML: 861
+infra-geo-ouverte/igo2-lib:
+  :TypeScript: 185443
+  :HTML: 15471
+  :CSS: 9116
+  :JavaScript: 7282
 infra-geo-ouverte/module-demo:
   :PHP: 1426
   :JavaScript: 433
@@ -982,6 +1092,10 @@ open-data/dataset-generator-webscraper:
   :C#: 17786
 open-data/docker-ndm:
   :Shell: 2716
+open-data/external_comment:
+  :PHP: 273543
+  :JavaScript: 9996
+  :HTML: 5972
 open-data/harvester-FGP:
   :Python: 375573
   :Shell: 1802
@@ -1001,6 +1115,9 @@ open-data/open-data: {}
 open-data/open-data.github.io:
   :JavaScript: 386564
   :CSS: 3482
+open-data/open-data.github.io-prev:
+  :JavaScript: 386564
+  :CSS: 3482
 open-data/opendata_package:
   :PHP: 10848
 open-data/report-PD-QA:
@@ -1014,6 +1131,11 @@ open-data/site-open-data:
   :Makefile: 3376
 open-data/tweakextras:
   :Python: 3783
+open-data/website:
+  :HTML: 5779
+  :Shell: 1048
+  :CSS: 144
+  :Makefile: 93
 phac-nml/PUBS2015: {}
 phac-nml/dynamic-tool-destination:
   :Python: 139697
@@ -1025,6 +1147,8 @@ phac-nml/ecoli_serotyping:
   :CSS: 4494
   :JavaScript: 2708
   :CoffeeScript: 1152
+phac-nml/ecoli_vf:
+  :Python: 1509
 phac-nml/galaxy_tools:
   :Shell: 594
 phac-nml/irida:
@@ -1051,6 +1175,22 @@ phac-nml/irida-miseq-uploader:
 phac-nml/neptune:
   :Python: 376858
   :Shell: 1060
+phac-nml/neptune-manuscript:
+  :TeX: 19273
+phac-nml/ngstar:
+  :JavaScript: 5308144
+  :CSS: 1300633
+  :Perl: 916116
+  :Python: 607817
+  :Perl6: 95829
+  :Makefile: 48815
+  :HTML: 20389
+  :Shell: 9629
+phac-nml/plasmidprofiler:
+  :R: 45119
+phac-nml/plasmidprofiler-galaxy:
+  :Shell: 4292
+  :Python: 2492
 phac-nml/snvphyl-galaxy:
   :Shell: 13995
   :Python: 3036
