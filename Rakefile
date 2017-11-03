@@ -23,7 +23,7 @@ end
 
 # @return [Octokit::Client] A GitHub API client
 def github_client
-  @github_client ||= Octokit::Client.new(access_token: ENV['ACCESS_TOKEN'])
+  @github_client ||= Octokit::Client.new(access_token: ENV.fetch('ACCESS_TOKEN'))
 end
 
 # @param [String] basename a basename

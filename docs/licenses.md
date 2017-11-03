@@ -111,6 +111,7 @@ And run the `licenses:github` task to recognize additional licenses thanks to yo
         # Select one organization to work on.
         export ORGS=
 
+        # Get a list of repositories without licenses.
         export REPOS=`bundle exec rake licenses:none CSV=true`
 
         # Look for an appropriate license. If you need different licenses for

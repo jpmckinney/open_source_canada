@@ -26,9 +26,9 @@ Then, follow the documentation relating to:
 
 ### Regular maintenance
 
+    bundle exec rake organizations > data/organizations.txt
     bundle exec rake licenses:github ONLYNEW=true
     bundle exec rake languages:github ONLYNEW=true
-    bundle exec rake organizations > data/organizations.txt
     bundle exec rake validate
     bundle exec rake licenses:none
     bundle exec rake licenses:unknown

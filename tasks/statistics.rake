@@ -11,6 +11,8 @@ namespace :statistics do
 
   desc 'Analyze repositories'
   task :repos do
+    organization_names = ENV['ORGS'] && ENV['ORGS'].split(',').map(&:downcase)
+
     data = YAML.load_file(File.join('data', 'languages.yml'))
 
     jurisdictions = {
@@ -37,10 +39,13 @@ namespace :statistics do
 
     data.each do |full_name,license|
       organization = full_name.split('/', 2)[0].downcase
-      jurisdiction = jurisdictions.keys.find{ |key| jurisdictions[key].include?(organization) } || organization
 
-      per_organization[organization] += 1
-      per_jurisdiction[jurisdiction] += 1
+      if !organization_names || organization_names.include?(organization)
+        jurisdiction = jurisdictions.keys.find{ |key| jurisdictions[key].include?(organization) } || organization
+
+        per_organization[organization] += 1
+        per_jurisdiction[jurisdiction] += 1
+      end
     end
 
     print_aggregate(per_organization)
@@ -49,6 +54,8 @@ namespace :statistics do
 
   desc 'Analyze software licenses'
   task :licenses do
+    organization_names = ENV['ORGS'] && ENV['ORGS'].split(',').map(&:downcase)
+
     data = YAML.load_file(File.join('data', 'licenses.yml'))
 
     per_license_id = Hash.new(0)
@@ -57,15 +64,17 @@ namespace :statistics do
     data.each do |full_name,license|
       organization = full_name.split('/', 2)[0].downcase
 
-      if license
-        license_id = license['id'] || 'other'
-      else
-        license_id = 'no-license'
-      end
+      if !organization_names || organization_names.include?(organization)
+        if license
+          license_id = license['id'] || 'other'
+        else
+          license_id = 'no-license'
+        end
 
-      per_license_id[license_id] += 1
-      per_organization[organization] ||= Hash.new(0)
-      per_organization[organization][license_id] += 1
+        per_license_id[license_id] += 1
+        per_organization[organization] ||= Hash.new(0)
+        per_organization[organization][license_id] += 1
+      end
     end
 
     print_aggregate(per_license_id)

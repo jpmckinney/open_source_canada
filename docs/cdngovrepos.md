@@ -19,7 +19,8 @@ My process for adding a new IFTTT applet is:
 ### Setup
 
 1. Copy the message `{{RepositoryName}} is a new repo by {{OwnerUsername}}: {{RepositoryURL}}` into a text editor
-1. Run `bundle exec rake organizations` to get a list of organizations to add
+1. Run `bundle exec rake organizations` to update the list of organizations
+1. Run `git diff data/organizations.txt | grep '^\+' | tail -n +2` to get organizations to add
 1. Copy the list of organizations into the same file in the text editor
 1. Add `https://ifttt.com/create/` to the browser's bookmarks toolbar
 1. Zoom the browser all the way out
@@ -29,8 +30,8 @@ My process for adding a new IFTTT applet is:
 1. Click the bookmark
 1. Click 'this'
 1. ⌘↓
-1. Click 'GitHub' (last row)
-1. Click 'New repository by a specific username or organization' (last item)
+1. Click 'GitHub' (before last row)
+1. Click 'New repository by a specific username or organization' (last item in first row)
 1. Cut and paste the first organization in the list
 1. Click 'Create trigger'
 1. Click 'that'

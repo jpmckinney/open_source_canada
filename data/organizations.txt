@@ -3,6 +3,7 @@ abgov
 bcdevexchange
 bcgov
 canada-ca
+cds-snc
 cihr
 cityofgreatersudbury
 cityofottawa
@@ -10,6 +11,7 @@ cityofsurrey
 cityoftoronto
 cngo
 communicationssecurityestablishment
+csbp-cpse
 eccc-msc
 electionsquebec
 fgpv-vpgf
