@@ -30,7 +30,7 @@ Or for only specific *repositories*:
 
 This section describes tools to submit pull requests to add licenses to repositories that don't have any.
 
-First, run the `licenses:github` task above. Then, list the repositories without licenses:
+First, run the `licenses:github` task above. Then, list the non-empty, non-stub repositories without licenses:
 
     bundle exec rake licenses:none
 
@@ -72,7 +72,7 @@ First, run the `licenses:github` above. Then, list the repositories with unrecog
 
 Or, list one organization's repositories with unrecognized licenses:
 
-    bundle exec rake licenses:none ORG=wet-boew
+    bundle exec rake licenses:unknown ORG=wet-boew
 
 Then, open each URL to inspect each license. If appropriate, create a file under `_licenses/` following the pattern `XX[-YY]-key-NOTE.txt` where:
 
@@ -102,7 +102,7 @@ notes: Adds a translation of mit.txt
 
 Then, list the repositories with unrecognized licenses as a comma-separated list:
 
-    bundle exec rake licenses:none CSV=true
+    bundle exec rake licenses:unknown CSV=true
 
 And run the `licenses:github` task to recognize additional licenses thanks to your changes. Repeat this section until all licenses are recognized.
 

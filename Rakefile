@@ -17,6 +17,7 @@ Octokit.default_media_type = 'application/vnd.github.drax-preview+json'
 
 Octokit.middleware = Faraday::RackBuilder.new do |builder|
   builder.use Faraday::HttpCache, serializer: Marshal, shared_cache: false
+  builder.use Octokit::Middleware::FollowRedirects
   builder.use Octokit::Response::RaiseError
   builder.adapter Faraday.default_adapter
 end
@@ -43,8 +44,13 @@ def process(basename)
 
   # Get the repositories to process.
   if ENV['REPOS']
-    repositories = ENV['REPOS'].split(',').map do |full_name|
-      github_client.repo(full_name, headers.dup)
+    repositories = []
+    ENV['REPOS'].split(',').each do |full_name|
+      begin
+        repositories << github_client.repo(full_name, headers.dup)
+      rescue Octokit::NotFound => e
+        puts e
+      end
     end
   else
     # Get the organizations to process.

@@ -25,6 +25,8 @@ end
 namespace :licenses do
   desc "Write a licenses.yml file with each repository's license, according to GitHub"
   task :github do
+    date_threshold = (Time.now - 10_368_000).to_i # 120 days
+
     process(LICENSES_FILENAME) do |data,repo|
       if repo.license
         contents = github_client.repository_license_contents(repo.full_name, {accept: 'application/vnd.github.drax-preview+json'})
@@ -77,42 +79,54 @@ namespace :licenses do
             Licensee.instance_variable_set('@inverse', (1 - CONFIDENCE_THRESHOLD / 100.0).round(2))
           end
         end
-      elsif !Git.ls_remote(repo.html_url).empty?
-        Dir.mktmpdir do |dir|
-          # @see https://github.com/benbalter/licensee/blob/master/bin/licensee
-          git = Git.clone("git@github.com:#{repo.full_name}.git", dir)
+      elsif Git.ls_remote(repo.html_url).empty?
+        data[repo.full_name] = { 'id' => '(empty)' }
+      else
+        # @see repos:analyze
+        commit = repo.rels[:commits].get.data[0].commit
+        tree = github_client.tree(repo.full_name, commit.tree.sha).tree
+        branches = repo.rels[:branches].get.data.map(&:name)
 
-          project = Licensee.project(dir, detect_packages: true, detect_readme: true)
-          matched_file = project.matched_file
+        if tree.one? && tree[0].path == 'README.md' && tree[0].size < 2_048 && commit.author.date.to_i < date_threshold && branches.one?
+          data[repo.full_name] = { 'id' => '(stub)' }
+        else
+          Dir.mktmpdir do |dir|
+            # @see https://github.com/benbalter/licensee/blob/master/bin/licensee
+            git = Git.clone("git@github.com:#{repo.full_name}.git", dir)
 
-          if matched_file
-            if matched_file.license
-              data[repo.full_name] = {
-                'id' => matched_file.license.meta['spdx-id'],
-                'url' => "https://github.com/#{repo.full_name}/blob/#{repo.default_branch}/#{matched_file.filename}",
-                'confidence' => matched_file.confidence,
-              }
-            elsif matched_file.is_a?(Licensee::Project::LicenseFile)
-              matcher = Licensee::Matchers::Dice.new(matched_file)
-              matches = matcher.licenses_by_similiarity
+            # Note that license declarations in package.json and README.md are not legally binding.
+            project = Licensee.project(dir, detect_packages: true, detect_readme: true)
+            matched_file = project.matched_file
 
-              unless matches.empty?
+            if matched_file
+              if matched_file.license
                 data[repo.full_name] = {
-                  'id' => matches[0][0].meta['spdx-id'],
+                  'id' => matched_file.license.meta['spdx-id'],
                   'url' => "https://github.com/#{repo.full_name}/blob/#{repo.default_branch}/#{matched_file.filename}",
-                  'confidence' => matches[0][1],
+                  'confidence' => matched_file.confidence,
+                }
+              elsif matched_file.is_a?(Licensee::Project::LicenseFile)
+                matcher = Licensee::Matchers::Dice.new(matched_file)
+                matches = matcher.licenses_by_similiarity
+
+                unless matches.empty?
+                  data[repo.full_name] = {
+                    'id' => matches[0][0].meta['spdx-id'],
+                    'url' => "https://github.com/#{repo.full_name}/blob/#{repo.default_branch}/#{matched_file.filename}",
+                    'confidence' => matches[0][1],
+                  }
+                end
+              end
+            else
+              filenames = Dir[File.join(dir, '**')]
+              # Make exception for Drupal modules, installation profiles and themes.
+              # @see https://github.com/wet-boew/wet-boew-drupal/pull/1895
+              if has_extensions?(filenames, ['.info']) && (has_extensions?(filenames, ['.module']) || has_extensions?(filenames, ['.install', '.profile']) || has_files?(filenames, ['template.php', 'theme-settings.php']))
+                data[repo.full_name] = {
+                  'id' => 'GPL-2.0',
+                  'note' => 'Drupal',
                 }
               end
-            end
-          else
-            filenames = Dir[File.join(dir, '**')]
-            # Make exception for Drupal modules, installation profiles and themes.
-            # @see https://github.com/wet-boew/wet-boew-drupal/pull/1895
-            if has_extensions?(filenames, ['.info']) && (has_extensions?(filenames, ['.module']) || has_extensions?(filenames, ['.install', '.profile']) || has_files?(filenames, ['template.php', 'theme-settings.php']))
-              data[repo.full_name] = {
-                'id' => 'GPL-2.0',
-                'note' => 'Drupal',
-              }
             end
           end
         end
@@ -145,7 +159,7 @@ namespace :licenses do
     end
   end
 
-  desc 'Prints URLs for repositories without licenses, according to GitHub'
+  desc 'Prints URLs for non-empty, non-stub repositories without licenses, according to GitHub'
   task :none do
     print_repository_urls(
       ->(license) { license.nil? },

@@ -12,8 +12,7 @@ namespace :repos do
 
       begin
         commit = repo.rels[:commits].get.data[0].commit
-        tree_sha = commit.tree.sha
-        tree = github_client.tree(full_name, tree_sha).tree
+        tree = github_client.tree(full_name, commit.tree.sha).tree
         path = tree[0].path
 
         if tree.one? && path == 'README.md'

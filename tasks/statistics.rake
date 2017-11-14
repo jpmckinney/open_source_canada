@@ -66,9 +66,9 @@ namespace :statistics do
 
       if !organization_names || organization_names.include?(organization)
         if license
-          license_id = license['id'] || 'other'
+          license_id = license['id'] || '(other)'
         else
-          license_id = 'no-license'
+          license_id = '(no-license)'
         end
 
         per_license_id[license_id] += 1
@@ -83,7 +83,7 @@ namespace :statistics do
       print_aggregate(counts)
     end
 
-    %w(no-license other).each do |license_id|
+    %w((no-license) (other)).each do |license_id|
       aggregate = Hash.new(0)
 
       per_organization.each do |organization,counts|
