@@ -391,17 +391,11 @@ ServiceCanada/gc-departments:
   url: https://github.com/ServiceCanada/gc-departments/blob/master/package.json
   confidence: 90
 ServiceCanada/menu-changes: 
-ServiceCanada/wet-boew-jvanulde-geomap-improvements:
-  id: MIT
-  url: https://github.com/ServiceCanada/wet-boew-jvanulde-geomap-improvements/blob/gh-pages/License-en.html
 ServiceCanada/wet-boew-wb-disable:
   id: MIT
   url: https://github.com/ServiceCanada/wet-boew-wb-disable/blob/gh-pages/License-en.html
 TBS-EACPD/PSES: 
 TBS-EACPD/spiders: 
-TkTech/ckanext-cloudstorage:
-  id: MIT
-  url: https://github.com/TkTech/ckanext-cloudstorage/blob/master/COPYING
 VilledeMontreal/CKAN-Extension-Export-Utilisateurs:
   id: MIT
   url: https://github.com/VilledeMontreal/CKAN-Extension-Export-Utilisateurs/blob/master/License-en.txt
@@ -475,9 +469,6 @@ bcgov/FGDB-Standards-Tools:
   url: https://github.com/bcgov/FGDB-Standards-Tools/blob/master/LICENSE
 bcgov/Family-Protection-Order: 
 bcgov/Gov-2.0-Bootstrap-Skeleton: 
-bcgov/HYDAT_Data_Viewer_App:
-  id: Apache-2.0
-  url: https://github.com/bcgov/HYDAT_Data_Viewer_App/blob/master/LICENSE
 bcgov/HectaresBC:
   id: Apache-2.0
   url: https://github.com/bcgov/HectaresBC/blob/master/LICENSE
@@ -1072,9 +1063,6 @@ bcgov/tfrs:
 bcgov/tfrs-functional-test-runner: 
 bcgov/tfrs-openshift: 
 bcgov/tfrs-sonar-scanner: 
-bcgov/tidyhydat:
-  id: Apache-2.0
-  url: https://github.com/bcgov/tidyhydat/blob/master/LICENSE
 bcgov/tire-recycling-indicator:
   id: Apache-2.0
   url: https://github.com/bcgov/tire-recycling-indicator/blob/master/LICENSE

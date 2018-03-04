@@ -236,7 +236,6 @@ CityofOttawa/ottawa_panelized_page_nav:
   :JavaScript: 4663
   :CSS: 3520
   :PHP: 1718
-CityofOttawa/ottawa_patches: {}
 CityofOttawa/ottawa_permits:
   :CSS: 2797
   :JavaScript: 2738
@@ -271,8 +270,6 @@ CityofOttawa/webform_gmap_location:
 CityofOttawa/webform_sidkey:
   :PHP: 0
 CityofOttawa/youth_portal_dashboard: {}
-CityofToronto/CPCRestProxy:
-  :Java: 51555
 CityofToronto/Open_Data_Analysis: {}
 CityofToronto/awesome-open-city-gov: {}
 CityofToronto/bdit_before-after:
@@ -315,7 +312,6 @@ CityofToronto/bdit_prj_october_report:
 CityofToronto/bdit_python_utilities:
   :Python: 37094
 CityofToronto/bdit_template: {}
-CityofToronto/bdit_traffic_evaluation: {}
 CityofToronto/bdit_volumes:
   :Python: 19733
   :R: 5992
