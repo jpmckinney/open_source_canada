@@ -9,6 +9,7 @@ cityofgreatersudbury
 cityofottawa
 cityofsurrey
 cityoftoronto
+cityssm
 cngo
 communicationssecurityestablishment
 csbp-cpse
@@ -24,6 +25,7 @@ mc-mbo-webpublishingteam
 nrc-cnrc
 nrcan
 nsgov
+ontariodigital
 open-data
 phac-nml
 pspc-spac
