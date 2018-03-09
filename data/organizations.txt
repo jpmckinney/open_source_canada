@@ -17,6 +17,7 @@ eccc-msc
 electionsquebec
 fgpv-vpgf
 gctools-outilsgc
+gctc-ntgc
 geocanviz
 gnwt
 hifis
