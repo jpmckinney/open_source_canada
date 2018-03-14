@@ -34,6 +34,7 @@ pspc-spac
 ramp-pcar
 rdoq
 servicecanada
+statcan
 tbs-eacpd
 thecityofcalgary
 villedemontreal
