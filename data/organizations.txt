@@ -23,6 +23,7 @@ gnwt
 hifis
 infra-geo-ouverte
 mc-mbo-webpublishingteam
+metpx
 nrc-cnrc
 nrcan
 nsgov
