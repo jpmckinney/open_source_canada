@@ -16,8 +16,9 @@ csbp-cpse
 eccc-msc
 electionsquebec
 fgpv-vpgf
-gctools-outilsgc
+gc-proto
 gctc-ntgc
+gctools-outilsgc
 geocanviz
 gnwt
 hifis
