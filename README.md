@@ -31,4 +31,6 @@ Then, follow the documentation relating to:
     bundle exec rake licenses:none
     bundle exec rake licenses:unknown
 
+**Last updated: March 4, 2018**
+
 Copyright (c) 2017 James McKinney, released under the MIT license
