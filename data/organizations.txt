@@ -4,6 +4,7 @@ bac-lac
 bcdevexchange
 bcgov
 canada-ca
+canada-ca-terraform-modules
 cds-snc
 cihr
 cityofgreatersudbury
@@ -41,6 +42,7 @@ rdoq
 servicecanada
 statcan
 tbs-eacpd
+tbs-sct-adsasd
 tc-ca
 thecityofcalgary
 veteransaffairscanada
