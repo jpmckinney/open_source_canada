@@ -18,6 +18,8 @@ csbp-cpse
 eccc-msc
 electionsquebec
 esdc-iitb
+esdc-devcop
+esdc-devx
 fgpv-vpgf
 gc-proto
 gctc-ntgc
@@ -39,6 +41,7 @@ phac-nml
 pspc-spac
 ramp-pcar
 rdoq
+sara-sabr
 servicecanada
 statcan
 tbs-eacpd
