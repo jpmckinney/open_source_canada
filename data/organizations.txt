@@ -4,6 +4,7 @@ bac-lac
 bcdevexchange
 bcgov
 canada-ca
+canada-ca-terraform-modules
 cds-snc
 cihr
 cityofgreatersudbury
@@ -17,6 +18,8 @@ csbp-cpse
 eccc-msc
 electionsquebec
 esdc-iitb
+esdc-devcop
+esdc-devx
 fgpv-vpgf
 gc-proto
 gctc-ntgc
@@ -38,9 +41,11 @@ phac-nml
 pspc-spac
 ramp-pcar
 rdoq
+sara-sabr
 servicecanada
 statcan
 tbs-eacpd
+tbs-sct-adsasd
 tc-ca
 thecityofcalgary
 veteransaffairscanada
